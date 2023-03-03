@@ -4,10 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
+import Vue from "vue";
+import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m";
+import { Ziggy } from "./ziggy";
 
-window.Vue = require('vue').default;
-
+// window.Vue = require("vue");
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -16,10 +18,14 @@ window.Vue = require('vue').default;
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const files = require.context("./", true, /\.vue$/i);
+files
+    .keys()
+    .map((key) =>
+        Vue.component(key.split("/").pop().split(".")[0], files(key).default)
+    );
 
-Vue.component('cart', require('./components/Cart.vue').default);
+// Vue.component("cart", require("./components/Cart.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,7 +33,9 @@ Vue.component('cart', require('./components/Cart.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.use(ZiggyVue, Ziggy);
+
 const app = new Vue({
-    el: '#princeton',
+    el: "#princeton",
 });
-// app.component
+// app.component("cart", require("./components/Cart.vue"));

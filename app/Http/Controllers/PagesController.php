@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plan;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PagesController extends Controller
 {
@@ -18,6 +20,10 @@ class PagesController extends Controller
     public function team()
     {
         return view('front.team');
+    }
+    public function individual()
+    {
+        return view('front.plans');
     }
     public function plans()
     {
@@ -43,10 +49,21 @@ class PagesController extends Controller
     {
         return view('front.quote');
     }
-    public function cart()
+    public function cart(Request $request)
     {
-        return view('front.cart');
+        $plan = $request->input('plan');
+        $type = $request->input('type');
+
+        $hPlan = Plan::where('name', $plan)->where('type', $type)->firstOrFail();
+        $items =  [$hPlan];
+        return view('front.cart', compact("items"));
     }
+
+    public function checkout()
+    {
+        return view('front.checkout');
+    }
+
     public function resources()
     {
         return redirect()->route('pages.provider');
@@ -67,5 +84,9 @@ class PagesController extends Controller
     public function contact()
     {
         return view('front.contact');
+    }
+    public function faq()
+    {
+        return view('front.faq');
     }
 }

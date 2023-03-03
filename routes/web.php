@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class, 'index'])->name('pages.home');
 Route::get('/board', [PagesController::class, 'board'])->name('pages.board');
 Route::get('/team', [PagesController::class, 'team'])->name('pages.team');
+Route::get('/individual', [PagesController::class, 'individual'])->name('pages.individual');
 Route::get('/plans', [PagesController::class, 'plans'])->name('pages.plans');
 Route::get('/corporate', [PagesController::class, 'corporate'])->name('pages.corporate');
 Route::get('/aged', [PagesController::class, 'aged'])->name('pages.aged');
@@ -29,6 +30,8 @@ Route::get('/provider', [PagesController::class, 'provider'])->name('pages.provi
 Route::get('/providers', [PagesController::class, 'providers'])->name('pages.providers');
 Route::get('/benefits', [PagesController::class, 'benefits'])->name('pages.benefits');
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
+Route::get('/faq', [PagesController::class, 'faq'])->name('pages.faq');
+Route::get('/checkout', [PagesController::class, 'checkout'])->name('pages.checkout');
 
 
 Route::get('/dashboard', function () {

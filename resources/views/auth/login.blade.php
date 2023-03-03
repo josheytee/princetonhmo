@@ -1,56 +1,61 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.main')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+@section('content')
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb-area bg_img pb-160" data-overlay="8" data-background="assets/images/uploads/banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-content">
+                        <h2 class="title">Login</h2>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>|</li>
+                            <li>Login</li>
+                        </ul>
+                        <h1 class="back-title">Login</h1>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+    <!-- login Area Strat-->
+    <section class="login-area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="basic-login">
+                        <h3 class="text-center mb-60">Login From Here</h3>
+                        <!-- Session Status -->
+                        <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                        <!-- Validation Errors -->
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <label for="email">Email Address <span>**</span></label>
+                            <input id="email" name="email" type="email" placeholder="Email address..." />
+                            <label for="pass">Password <span>**</span></label>
+                            <input id="pass" name="password" type="password" placeholder="Enter password..." />
+                            <div class="login-action mb-20 fix">
+                                <span class="log-rem f-left">
+                                    <input id="remember" name="remember" type="checkbox" />
+                                    <label for="remember">Remember me!</label>
+                                </span>
+                                <span class="forgot-login f-right">
+                                    <a href="#">Lost your password?</a>
+                                </span>
+                            </div>
+                            <button class="site-btn red w-100">Login Now</button>
+                            <div class="or-divide"><span>or</span></div>
+                            <button class="site-btn w-100">Register Now</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        </div>
+    </section>
+    <!-- login Area End-->
+@endsection

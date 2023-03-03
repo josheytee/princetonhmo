@@ -63,7 +63,7 @@
                     <div class="section-heading mb-50">
                         <h2 class="section-title shape">THE BOARD</h2>
                         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-                                    or incididunt ut labore et dolore magna aliqua.</p> -->
+                                            or incididunt ut labore et dolore magna aliqua.</p> -->
                     </div>
                 </div>
             </div>
@@ -71,11 +71,11 @@
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Prince Goke Oladinni</h4>
                             <span class="sub-title">Chairman</span>
@@ -84,21 +84,21 @@
                                 Deguards Security Services Limited.</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Dr. Richards Adeleye Afonja</h4>
                             <span class="sub-title">Vice-Chairman</span>
@@ -107,21 +107,21 @@
                                 Executive Officer at AMERICAN Hospitals and Dokita 247.</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Dr. Joel Nelson</h4>
                             <span class="sub-title">Director</span>
@@ -131,21 +131,21 @@
                                 in practice for more than 25 years.</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Irene Olumese, Ph.D</h4>
                             <span class="sub-title">Director</span>
@@ -155,21 +155,21 @@
                             </p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Adesina Olufemi Adegunle, Ph.D.</h4>
                             <span class="sub-title">Managing Director</span>
@@ -179,21 +179,21 @@
                                 Management, USA. Founder, Next Generation Foundation.</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Pharm. Bolaji Adisa</h4>
                             <span class="sub-title">Executive Director</span>
@@ -202,21 +202,21 @@
                                 Beecham PLC. He is on Board of several companies based in USA and Nigeria.</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Godwin Nwanbuka: Ph.D.</h4>
                             <span class="sub-title">Director</span>
@@ -226,21 +226,21 @@
                                 Evaluation at UNICEF, Lagos</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 col-sm-12 mt-30">
                     <div class="single-carousel-item">
                         <!-- <div class="thumb">
-                                    <img src="assets/images/team/doctor-02.jpeg" alt="">
-                                    <span class="icon">
-                                        <img src="assets/images/icons/heart-icon.png" alt="">
-                                    </span>
-                                </div> -->
+                                            <img src="assets/images/team/doctor-02.jpeg" alt="">
+                                            <span class="icon">
+                                                <img src="assets/images/icons/heart-icon.png" alt="">
+                                            </span>
+                                        </div> -->
                         <div class="content">
                             <h4 class="title">Chief John Aiyegbo</h4>
                             <span class="sub-title">Director</span>
@@ -248,11 +248,11 @@
                                 practiced in different countries with a wide experience in Health Care delivery system.</p>
                         </div>
                         <!-- <div class="social-links">
-                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-behance"></i></a>
-                                    <a href="#0"><i class="fab fa-youtube"></i></a>
-                                </div> -->
+                                            <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                                            <a href="#0"><i class="fab fa-behance"></i></a>
+                                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                                        </div> -->
                     </div>
                 </div>
             </div>
@@ -261,7 +261,7 @@
     <!-- our-expert area end -->
 
     <!-- our mission area start -->
-    <section class="our-mission-area pt-120 pb-120">
+    {{-- <section class="our-mission-area pt-120 pb-120">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -361,6 +361,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- our mission area end -->
 @endsection

@@ -87,77 +87,86 @@
         </div>
     </div>
     <!-- preloader end -->
+    @hasSection('navigation')
+        {{-- <div class="pull-right"> --}}
+        @yield('navigation')
+        {{-- </div>
 
-    <!-- header start -->
-    <header id="sticky-header" class="site-header">
-        <div class="container custom-header">
-            <div class="row align-items-center">
-                <div class="col-xl-3 col-lg-3">
-                    <a href="index.html" class="site-logo">
-                        <img src="https://princetonhmo.net/wp-content/uploads/2019/08/logo_princeon.png" alt="">
-                    </a>
-                    <div class="mobile-menu"></div>
-                </div>
-                <div class="col-xl-6 col-lg-9 my-auto">
-                    <div class="mainmenu">
-                        <nav id="mobile-menu">
-                            <ul>
-                                <li><a href="{{ route('pages.home') }}">Home</a>
-                                    <!-- <ul class="sub-menu">
-                                        <li><a href="index.html">Home Style 01</a></li>
-                                        <li><a href="index-2.html">Home Style 02</a></li>
-                                        <li><a href="index-3.html">Home Style 03</a></li>
-                                    </ul> -->
-                                </li>
-                                <li>
-                                    <a href="{{ route('pages.board') }}">About Us</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ route('pages.board') }}">The Board</a></li>
-                                        <li><a href="{{ route('pages.team') }}"">Management Team</a></li>
-                                        {{-- <li><a href="services-03.html">FAQs</a></li> --}}
-                                    </ul>
-                                </li>
-                                <li><a href="{{ route('pages.plans') }}">Our Plans</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ route('pages.plans') }}">Individual</a></li>
-                                        <li><a href="{{ route('pages.corporate') }}"">Corporate</a></li>
-                                        <li><a href="{{ route('pages.aged') }}">Aged</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="{{ route('pages.resources') }}">Resources</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ route('pages.provider') }}">Be a provider</a></li>
-                                        <li><a href="{{ route('pages.providers') }}">Providers List</a></li>
-                                        <li><a href="{{ route('pages.benefits') }}">Your Benefit List</a></li>
-
-                                    </ul>
-                                </li>
-                                {{-- <li><a href="{{ route('pages.providers') }}">Providers</a></li> --}}
-                                <!-- <li><a href="blog.html">Blog</a></li> -->
-                                <li><a href="{{ route('pages.contact') }}">Contact US</a></li>
-                            </ul>
-                        </nav>
+        <div class="clearfix"></div> --}}
+    @else
+        <!-- header start -->
+        <header id="sticky-header" class="site-header">
+            <div class="container custom-header">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3">
+                        <a href="{{ url('/') }}" class="site-logo">
+                            <img src="https://princetonhmo.net/wp-content/uploads/2019/08/logo_princeon.png"
+                                alt="">
+                        </a>
+                        <div class="mobile-menu"></div>
                     </div>
-                </div>
-                <div class="col-xl-3 d-none d-xl-block">
-                    <div class="header-top-info d-flex align-items-center">
-                        <div class="icon">
-                            <img src="assets/images/icons/header-top-icon-1.png" alt="">
+                    <div class="col-xl-6 col-lg-9 my-auto">
+                        <div class="mainmenu">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    <li><a href="{{ route('pages.home') }}">Home</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="index.html">Home Style 01</a></li>
+                                            <li><a href="index-2.html">Home Style 02</a></li>
+                                            <li><a href="index-3.html">Home Style 03</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('pages.board') }}">About Us</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{ route('pages.board') }}">The Board</a></li>
+                                            <li><a href="{{ route('pages.team') }}"">Management Team</a></li>
+                                            <li><a href="{{ route('pages.faq') }}">FAQs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ route('pages.individual') }}">Our Plans</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{ route('pages.individual') }}">Individual</a></li>
+                                            <li><a href="{{ route('pages.corporate') }}"">Corporate</a></li>
+                                            <li><a href="{{ route('pages.aged') }}">Aged</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('pages.resources') }}">Resources</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{ route('pages.provider') }}">Be a provider</a></li>
+                                            <li><a href="{{ route('pages.providers') }}">Providers List</a></li>
+                                            <li><a href="{{ route('pages.benefits') }}">Your Benefit List</a></li>
+
+                                        </ul>
+                                    </li>
+                                    {{-- <li><a href="{{ route('pages.providers') }}">Providers</a></li> --}}
+                                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                                    <li><a href="{{ route('pages.contact') }}">Contact US</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="content">
-                            <p>Get Support</p>
-                            <a href="tel:987876875865">+987 (876) 875 86 5</a>
+                    </div>
+                    <div class="col-xl-3 d-none d-xl-block">
+                        <div class="header-top-info d-flex align-items-center">
+                            <div class="icon">
+                                <img src="assets/images/icons/header-top-icon-1.png" alt="">
+                            </div>
+                            <div class="content">
+                                <p>Get Support</p>
+                                <a href="tel:987876875865">+987 (876) 875 86 5</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- header end -->
+        </header>
+        <!-- header end -->
+    @endif
 
-
-    @yield('content')
+    <div id="princeton">
+        @yield('content')
+    </div>
 
     <!-- footer start -->
     <footer class="site-footer pt-100 pb-80">
@@ -236,16 +245,11 @@
                             </div>
                             <div class="content">
                                 <h5 class="title">Opening Hours</h5>
-                                <p>It’s a fake timing. Actually we
-                                    are available 24/7.</p>
                             </div>
                         </div>
                         <div class="opening-hour-list">
                             <ul>
-                                <li>Monday - Friday<span>8:00 - 16:00</span></li>
-                                <li>Saturday<span>8:00 - 12:00</span></li>
-                                <li>Sunday<span><strong>Closed</strong></span></li>
-                                <li>Lunch Break<span>9:15 - 22:45</span></li>
+                                <li>Monday - Friday<span>8:00 - 17:00</span></li>
                             </ul>
                         </div>
                     </div>

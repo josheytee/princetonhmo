@@ -30,56 +30,54 @@
                     <div class="row pr-20">
                         <div class="col-lg-6">
                             <div class="contact-info-box">
-                                <h4 class="title"><i class="fal fa-flag-checkered"></i> New York</h4>
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> Head Office </h4>
                                 <ul>
                                     <li>
                                         <div class="icon">
                                             <i class="fal fa-map-marker-alt"></i>
                                         </div>
                                         <div class="content">
-                                            340 West 42nd St
-                                            New York, NY 10036
+                                            25, Mogaji Are Road,
+                                            Opp Vitas Bakery Ring Road,
+                                            Ibadan. Oyo State
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="mailto:supportinfo@gmail.com">
+                                        <a href="mailto:info@princetonhmo.net">
                                             <span class="icon"><i class="fal fa-envelope-open"></i></span>
-                                            <span class="content">supportinfo@gmail.com</span>
+                                            <span class="content">info@princetonhmo.net</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="tel:01234568456">
-                                            <span class="icon"><i class="fal fa-phone"></i></span>
-                                            <span class="content">+88012 (345) 68456</span>
-                                        </a>
+                                        <span class="icon">
+                                            <i class="fal fa-phone"></i>
+                                        </span>
+                                        <span class="content">
+                                            <a href="tel:07004004000">07004004000</a>
+                                            <a href="tel:08151205555">08151205555</a>
+                                            <a href="tel:08185955555">08185955555</a>
+                                            <a href="tel:09060005674">09060005674</a>
+                                            <a href="tel:09060005654">09060005654</a>
+                                            <a href="tel:08004004000">08004004000 (Toll free)</a>
+                                            <a href="tel:08005005000">08005005000 (Toll free)</a>
+                                        </span>
                                     </li>
+
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="contact-info-box">
-                                <h4 class="title"><i class="fal fa-flag-checkered"></i> Australia</h4>
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> ABUJA OFFICE </h4>
                                 <ul>
                                     <li>
                                         <div class="icon">
                                             <i class="fal fa-map-marker-alt"></i>
                                         </div>
                                         <div class="content">
-                                            340 West 42nd St
-                                            New York, NY 10036
+                                            Suite B 13B,
+                                            opposite RCCG Desire of all Nations school, Jabi, Abuja.
                                         </div>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:supportinfo@gmail.com">
-                                            <span class="icon"><i class="fal fa-envelope-open"></i></span>
-                                            <span class="content">supportinfo@gmail.com</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:01234568456">
-                                            <span class="icon"><i class="fal fa-phone"></i></span>
-                                            <span class="content">+88012 (345) 68456</span>
-                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -88,57 +86,91 @@
                     <div class="row mt-80 pr-20">
                         <div class="col-lg-6">
                             <div class="contact-info-box">
-                                <h4 class="title"><i class="fal fa-flag-checkered"></i> Canada</h4>
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> ABEOKUTA OFFICE</h4>
                                 <ul>
                                     <li>
                                         <div class="icon">
                                             <i class="fal fa-map-marker-alt"></i>
                                         </div>
                                         <div class="content">
-                                            340 West 42nd St
-                                            New York, NY 10036
+                                            Km 3, Ibadan-Abeokuta Road,
+                                            beside CDA Filling station,
+                                            Obantoko, Abeokuta, Ogun State.
                                         </div>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:supportinfo@gmail.com">
-                                            <span class="icon"><i class="fal fa-envelope-open"></i></span>
-                                            <span class="content">supportinfo@gmail.com</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:01234568456">
-                                            <span class="icon"><i class="fal fa-phone"></i></span>
-                                            <span class="content">+88012 (345) 68456</span>
-                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="contact-info-box">
-                                <h4 class="title"><i class="fal fa-flag-checkered"></i> USA</h4>
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> KANO</h4>
                                 <ul>
                                     <li>
                                         <div class="icon">
                                             <i class="fal fa-map-marker-alt"></i>
                                         </div>
                                         <div class="content">
-                                            340 West 42nd St
-                                            New York, NY 10036
+                                            No 7, Bompai road,
+                                            Opposite Central Hotel,
+                                            Kano state.
                                         </div>
                                     </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-80 pr-20">
+                        <div class="col-lg-6">
+                            <div class="contact-info-box">
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> KADUNA</h4>
+                                <ul>
                                     <li>
-                                        <a href="mailto:supportinfo@gmail.com">
-                                            <span class="icon"><i class="fal fa-envelope-open"></i></span>
-                                            <span class="content">supportinfo@gmail.com</span>
-                                        </a>
+                                        <div class="icon">
+                                            <i class="fal fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="content">
+                                            26, Constitution Road Kaduna.
+                                        </div>
                                     </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-info-box">
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> LAGOS</h4>
+                                <ul>
                                     <li>
-                                        <a href="tel:01234568456">
-                                            <span class="icon"><i class="fal fa-phone"></i></span>
-                                            <span class="content">+88012 (345) 68456</span>
-                                        </a>
+                                        <div class="icon">
+                                            <i class="fal fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="content">
+                                            Block A, Suit 30,
+                                            Alausa Shopping Mall,
+                                            Obafemi Awolowo way,
+                                            Ikeja, Lagos.
+                                        </div>
                                     </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-80 pr-20">
+                        <div class="col-lg-6">
+                            <div class="contact-info-box">
+                                <h4 class="title"><i class="fal fa-flag-checkered"></i> AKURE</h4>
+                                <ul>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fal fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="content">
+                                            Km 4/5, Ilesa-Owo Express road, Akure.
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -154,7 +186,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for="fullname" id="fullname-label">Full Name Here</label>
+                                            <label for="fullname" id="fullname-label">Full Name</label>
                                             <input type="text" name="name" id="fullname"
                                                 placeholder="Sokila DJ Maxien">
                                             <span><i class="fal fa-user"></i></span>
@@ -166,6 +198,13 @@
                                             <input type="email" name="mail" id="email"
                                                 placeholder="sokilainfo@gmail.com">
                                             <span><i class="fal fa-envelope"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="phone" id="phone-label">Phone </label>
+                                            <input type="tel" name="phone" id="phone" placeholder="">
+                                            <span><i class="fal fa-phone"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">

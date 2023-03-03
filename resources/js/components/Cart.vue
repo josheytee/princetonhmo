@@ -1,5 +1,4 @@
 <template>
-    <!-- Cart Area Strat-->
     <section class="cart-area pt-120 pb-120">
         <div class="container">
             <div class="row">
@@ -9,8 +8,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="product-thumbnail">Images</th>
-                                        <th class="cart-product-name">Product</th>
+                                        <th class="cart-product-name">Health Plan</th>
                                         <th class="product-price">Unit Price</th>
                                         <th class="product-quantity">Quantity</th>
                                         <th class="product-subtotal">Total</th>
@@ -18,61 +16,40 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="product-thumbnail">
-                                            <a href="#">
-                                                <img src="assets/images/shop/img1.jpg" alt="">
-                                            </a>
+                                    <tr v-for="item in items">
+                                        <td class="product-name">
+                                            <a :href="route('pages.' + item.name)">{{ item.name }}</a>
+                                            <p>{{ item.type }}</p>
                                         </td>
-                                        <td class="product-name"><a href="#">Bakix Furniture</a></td>
-                                        <td class="product-price"><span class="amount">$130.00</span></td>
+                                        <td class="product-price"><span class="amount">₦{{ item.price }}</span></td>
                                         <td class="product-quantity">
-                                            <div class="cart-plus-minus"><input type="text" value="1" /></div>
+                                            <div class="cart-plus-minus">
+                                                <input type="number" v-model="quantity" value="1" />
+                                            </div>
                                         </td>
-                                        <td class="product-subtotal"><span class="amount">$130.00</span></td>
+                                        <td class="product-subtotal"><span class="amount">₦{{ item.price * quantity
+                                        }}</span></td>
                                         <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                     </tr>
-                                    <tr>
-                                        <td class="product-thumbnail"><a href="#"><img src="assets/images/shop/img2.jpg"
-                                                    alt=""></a>
-                                        </td>
-                                        <td class="product-name"><a href="#">Sujon Chair Set</a></td>
-                                        <td class="product-price"><span class="amount">$120.50</span></td>
-                                        <td class="product-quantity">
-                                            <div class="cart-plus-minus"><input type="text" value="1" /></div>
-                                        </td>
-                                        <td class="product-subtotal"><span class="amount">$120.50</span></td>
-                                        <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="coupon-all">
-                                    <div class="coupon">
-                                        <input id="coupon_code" class="input-text" name="coupon_code" value=""
-                                            placeholder="Coupon code" type="text">
-                                        <button class="site-btn" name="apply_coupon" type="submit">Apply
-                                            coupon</button>
-                                    </div>
-                                    <div class="coupon2">
-                                        <input class="site-btn red" name="update_cart" value="Update cart"
-                                            type="submit">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-md-5 ml-auto">
                                 <div class="cart-page-total">
                                     <h2>Cart totals</h2>
                                     <ul class="mb-20">
-                                        <li>Subtotal <span>$250.00</span></li>
-                                        <li>Total <span>$250.00</span></li>
+                                        <!-- <li>Subtotal <span>$250.00</span></li> -->
+                                        <li>Total <span>₦{{ getTotaal }}.00</span></li>
                                     </ul>
-                                    <a class="site-btn red" href="#" @click.prevent="makePayment()">Proceed to
-                                        checkout</a>
+                                    <a class="site-btn red" :href="route('pages.checkout')">
+                                        Proceed to checkout
+                                    </a>
+                                    <!-- <a class="site-btn red" href="#" @click.prevent="makePayment()">
+                                        Proceed to checkout
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
@@ -81,17 +58,31 @@
             </div>
         </div>
     </section>
-    <!-- Cart Area End-->
 </template>
 
 <script>
 export default {
+    props: ['items'],
+    data() {
+        return {
+            //
+            quantity: 1,
+        }
+    },
+    computed: {
+        //
+        getTotaal() {
+            return this.items.reduce((total, item) => {
+                return total + item.price * this.quantity
+            }, 0)
+        }
+    },
     methods: {
         makePayment() {
             FlutterwaveCheckout({
                 public_key: "FLWPUBK_TEST-da8a7db5ca9da809b2d4298da06aa5ba-X",
                 tx_ref: "titanic-48981487343MDI0NzMx",
-                amount: 50000,
+                amount: this.getTotaal,
                 currency: "NGN",
                 payment_options: "card, banktransfer, ussd",
                 redirect_url: "https://flutterwave-blog-test.netlify.app/",

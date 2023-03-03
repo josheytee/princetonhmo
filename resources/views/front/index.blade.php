@@ -1,5 +1,75 @@
 @extends('layouts.main')
 
+@section('navigation')
+    <!-- header start -->
+    <header id="sticky-header" class="site-header">
+        <div class="container custom-header">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-3">
+                    <a href="{{ url('/') }}" class="site-logo">
+                        <img src="https://princetonhmo.net/wp-content/uploads/2019/08/logo_princeon.png" alt="">
+                    </a>
+                    <div class="mobile-menu"></div>
+                </div>
+                <div class="col-xl-6 col-lg-9 my-auto">
+                    <div class="mainmenu">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li><a href="{{ route('pages.home') }}">Home</a>
+                                    <!-- <ul class="sub-menu">
+                                                                    <li><a href="index.html">Home Style 01</a></li>
+                                                                    <li><a href="index-2.html">Home Style 02</a></li>
+                                                                    <li><a href="index-3.html">Home Style 03</a></li>
+                                                                </ul> -->
+                                </li>
+                                <li>
+                                    <a href="{{ route('pages.board') }}">About Us</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('pages.board') }}">The Board</a></li>
+                                        <li><a href="{{ route('pages.team') }}"">Management Team</a></li>
+                                        {{-- <li><a href="services-03.html">FAQs</a></li> --}}
+                                    </ul>
+                                </li>
+                                <li><a href="{{ route('pages.individual') }}">Our Plans</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('pages.individual') }}">Individual</a></li>
+                                        <li><a href="{{ route('pages.corporate') }}"">Corporate</a></li>
+                                        <li><a href="{{ route('pages.aged') }}">Aged</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('pages.resources') }}">Resources</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('pages.provider') }}">Be a provider</a></li>
+                                        <li><a href="{{ route('pages.providers') }}">Providers List</a></li>
+                                        <li><a href="{{ route('pages.benefits') }}">Your Benefit List</a></li>
+
+                                    </ul>
+                                </li>
+                                {{-- <li><a href="{{ route('pages.providers') }}">Providers</a></li> --}}
+                                <!-- <li><a href="blog.html">Blog</a></li> -->
+                                <li><a href="{{ route('pages.contact') }}">Contact US</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-3 d-none d-xl-block">
+                    <div class="header-top-info d-flex align-items-center">
+                        <div class="icon">
+                            <img src="assets/images/icons/header-top-icon-1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Get Support</p>
+                            <a href="tel:987876875865">+987 (876) 875 86 5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+@endsection
+
 @section('content')
     <!-- Hero area start -->
     <section class="hero-area bg_img" data-background="assets/images/banner/01.jpg">
@@ -151,19 +221,19 @@
                             </div>
                         </div>
                         <!-- <div class="about-founder d-flex align-items-center">
-                                                                                <div class="founder-detals d-flex align-items-center">
-                                                                                    <div class="thumb">
-                                                                                        <img src="assets/images/about/authore.png" alt="">
-                                                                                    </div>
-                                                                                    <div class="content">
-                                                                                        <h4 class="name">Jemilin D. William</h4>
-                                                                                        <span class="designation">Founder</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="founder-signature">
-                                                                                    <img src="assets/images/about/signature.png" alt="">
-                                                                                </div>
-                                                                            </div> -->
+                                                                                                                            <div class="founder-detals d-flex align-items-center">
+                                                                                                                                <div class="thumb">
+                                                                                                                                    <img src="assets/images/about/authore.png" alt="">
+                                                                                                                                </div>
+                                                                                                                                <div class="content">
+                                                                                                                                    <h4 class="name">Jemilin D. William</h4>
+                                                                                                                                    <span class="designation">Founder</span>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="founder-signature">
+                                                                                                                                <img src="assets/images/about/signature.png" alt="">
+                                                                                                                            </div>
+                                                                                                                        </div> -->
                     </div>
                 </div>
             </div>
@@ -191,8 +261,8 @@
                         </div>
                         <div class="content">
                             <h4 class="title">Registration</h4>
-                            <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
-                            </p>
+                            {{-- <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -204,8 +274,8 @@
                         </div>
                         <div class="content">
                             <h4 class="title">Select Choice or preferred Provider</h4>
-                            <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
-                            </p>
+                            {{-- <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -217,8 +287,8 @@
                         </div>
                         <div class="content">
                             <h4 class="title">Get Identification</h4>
-                            <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
-                            </p>
+                            {{-- <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -230,8 +300,8 @@
                         </div>
                         <div class="content">
                             <h4 class="title">Access to Provider</h4>
-                            <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
-                            </p>
+                            {{-- <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor incid.
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -262,185 +332,185 @@
 
     <!-- our-expert area start -->
     <!-- <section class="our-expert-area bg-2 pb-110">
-                                                            <div class="container">
-                                                                <div class="row justify-content-center">
-                                                                    <div class="col-lg-6 col-md-8 text-center">
-                                                                        <div class="section-heading mb-70">
-                                                                            <h2 class="section-title shape">Our Exparts</h2>
-                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-                                                                                or incididunt ut labore et dolore magna aliqua.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row no-gutters expert-box-wrap">
-                                                                    <div class="col-xl-6 col-lg-12">
-                                                                        <div class="single-expert-box">
-                                                                            <div class="expert-box-left">
-                                                                                <div class="thumb">
-                                                                                    <img src="assets/images/team/team-1.jpg" alt="">
-                                                                                    <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h5 class="name">Rosalina Will.</h5>
-                                                                                    <span class="designation">Founder</span>
-                                                                                    <img src="assets/images/team/signature.png" alt="" class="signature">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="expert-box-right">
-                                                                                <div class="content">
-                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
-                                                                                    <div class="expert-box-buttons">
-                                                                                        <a href="contact.html" class="site-btn white">Contact Now</a>
-                                                                                        <span class="comments-btn"><i class="fal fa-comments"></i></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-6 col-lg-12">
-                                                                        <div class="single-expert-box">
-                                                                            <div class="expert-box-left">
-                                                                                <div class="thumb">
-                                                                                    <img src="assets/images/team/team-2.jpg" alt="">
-                                                                                    <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h5 class="name">Dambul Ph.</h5>
-                                                                                    <span class="designation">Dentist</span>
-                                                                                    <img src="assets/images/team/signature.png" alt="" class="signature">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="expert-box-right">
-                                                                                <div class="content">
-                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
-                                                                                    <div class="expert-box-buttons">
-                                                                                        <a href="contact.html" class="site-btn white">Contact Now</a>
-                                                                                        <span class="comments-btn"><i class="fal fa-comments"></i></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-6 col-lg-12">
-                                                                        <div class="single-expert-box">
-                                                                            <div class="expert-box-left">
-                                                                                <div class="thumb">
-                                                                                    <img src="assets/images/team/team-3.jpg" alt="">
-                                                                                    <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h5 class="name">Rosalina Will..</h5>
-                                                                                    <span class="designation">Founder</span>
-                                                                                    <img src="assets/images/team/signature.png" alt="" class="signature">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="expert-box-right">
-                                                                                <div class="content">
-                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
-                                                                                    <div class="expert-box-buttons">
-                                                                                        <a href="contact.html" class="site-btn white">Contact Now</a>
-                                                                                        <span class="comments-btn"><i class="fal fa-comments"></i></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xl-6 col-lg-12">
-                                                                        <div class="single-expert-box">
-                                                                            <div class="expert-box-left">
-                                                                                <div class="thumb">
-                                                                                    <img src="assets/images/team/team-4.jpg" alt="">
-                                                                                    <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h5 class="name">Rosalina Will.</h5>
-                                                                                    <span class="designation">Founder</span>
-                                                                                    <img src="assets/images/team/signature.png" alt="" class="signature">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="expert-box-right">
-                                                                                <div class="content">
-                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
-                                                                                    <div class="expert-box-buttons">
-                                                                                        <a href="contact.html" class="site-btn white">Contact Now</a>
-                                                                                        <span class="comments-btn"><i class="fal fa-comments"></i></span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </section> -->
+                                                                                                        <div class="container">
+                                                                                                            <div class="row justify-content-center">
+                                                                                                                <div class="col-lg-6 col-md-8 text-center">
+                                                                                                                    <div class="section-heading mb-70">
+                                                                                                                        <h2 class="section-title shape">Our Exparts</h2>
+                                                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
+                                                                                                                            or incididunt ut labore et dolore magna aliqua.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="row no-gutters expert-box-wrap">
+                                                                                                                <div class="col-xl-6 col-lg-12">
+                                                                                                                    <div class="single-expert-box">
+                                                                                                                        <div class="expert-box-left">
+                                                                                                                            <div class="thumb">
+                                                                                                                                <img src="assets/images/team/team-1.jpg" alt="">
+                                                                                                                                <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h5 class="name">Rosalina Will.</h5>
+                                                                                                                                <span class="designation">Founder</span>
+                                                                                                                                <img src="assets/images/team/signature.png" alt="" class="signature">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="expert-box-right">
+                                                                                                                            <div class="content">
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
+                                                                                                                                <div class="expert-box-buttons">
+                                                                                                                                    <a href="contact.html" class="site-btn white">Contact Now</a>
+                                                                                                                                    <span class="comments-btn"><i class="fal fa-comments"></i></span>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-xl-6 col-lg-12">
+                                                                                                                    <div class="single-expert-box">
+                                                                                                                        <div class="expert-box-left">
+                                                                                                                            <div class="thumb">
+                                                                                                                                <img src="assets/images/team/team-2.jpg" alt="">
+                                                                                                                                <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h5 class="name">Dambul Ph.</h5>
+                                                                                                                                <span class="designation">Dentist</span>
+                                                                                                                                <img src="assets/images/team/signature.png" alt="" class="signature">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="expert-box-right">
+                                                                                                                            <div class="content">
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
+                                                                                                                                <div class="expert-box-buttons">
+                                                                                                                                    <a href="contact.html" class="site-btn white">Contact Now</a>
+                                                                                                                                    <span class="comments-btn"><i class="fal fa-comments"></i></span>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-xl-6 col-lg-12">
+                                                                                                                    <div class="single-expert-box">
+                                                                                                                        <div class="expert-box-left">
+                                                                                                                            <div class="thumb">
+                                                                                                                                <img src="assets/images/team/team-3.jpg" alt="">
+                                                                                                                                <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h5 class="name">Rosalina Will..</h5>
+                                                                                                                                <span class="designation">Founder</span>
+                                                                                                                                <img src="assets/images/team/signature.png" alt="" class="signature">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="expert-box-right">
+                                                                                                                            <div class="content">
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
+                                                                                                                                <div class="expert-box-buttons">
+                                                                                                                                    <a href="contact.html" class="site-btn white">Contact Now</a>
+                                                                                                                                    <span class="comments-btn"><i class="fal fa-comments"></i></span>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-xl-6 col-lg-12">
+                                                                                                                    <div class="single-expert-box">
+                                                                                                                        <div class="expert-box-left">
+                                                                                                                            <div class="thumb">
+                                                                                                                                <img src="assets/images/team/team-4.jpg" alt="">
+                                                                                                                                <span class="icon"><img src="assets/images/icons/icon-tablate.png" alt=""></span>
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h5 class="name">Rosalina Will.</h5>
+                                                                                                                                <span class="designation">Founder</span>
+                                                                                                                                <img src="assets/images/team/signature.png" alt="" class="signature">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="expert-box-right">
+                                                                                                                            <div class="content">
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ at. Duis aute irure dolor in reprehenderit in volutate velit esse cillum dolore.</p>
+                                                                                                                                <div class="expert-box-buttons">
+                                                                                                                                    <a href="contact.html" class="site-btn white">Contact Now</a>
+                                                                                                                                    <span class="comments-btn"><i class="fal fa-comments"></i></span>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </section> -->
     <!-- our-expert area end -->
 
     <!-- core feature area start -->
     <!-- <section class="core-feature-area pt-110 pb-110">
-                                                            <div class="container">
-                                                                <div class="row mb-70">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="section-heading">
-                                                                            <h2 class="section-title">Core Features</h2>
-                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
-                                                                                or incididunt ut labore et dolore magna aliqua.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-4 offset-lg-2 my-auto text-right">
-                                                                        <a href="about.html" class="site-btn white">Learn More</a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <div class="feature-carousel owl-carousel">
-                                                                            <div class="singel-core-feature-box text-center">
-                                                                                <div class="icon">
-                                                                                    <img src="assets/images/icons/feature-icon-04.png" alt="">
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h3 class="title">24/7 Ambulance Trans</h3>
-                                                                                    <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
-                                                                                    <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                                                    aliqua nim ad minim.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="singel-core-feature-box text-center">
-                                                                                <div class="icon">
-                                                                                    <img src="assets/images/icons/feature-icon-05.png" alt="">
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h3 class="title">Research & Test</h3>
-                                                                                    <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
-                                                                                    <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                                                    aliqua nim ad minim.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="singel-core-feature-box text-center">
-                                                                                <div class="icon">
-                                                                                    <img src="assets/images/icons/feature-icon-06.png" alt="">
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h3 class="title">Make Appointment</h3>
-                                                                                    <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
-                                                                                    <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                                                    aliqua nim ad minim.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="singel-core-feature-box text-center">
-                                                                                <div class="icon">
-                                                                                    <img src="assets/images/icons/feature-icon-04.png" alt="">
-                                                                                </div>
-                                                                                <div class="content">
-                                                                                    <h3 class="title">24/7 Ambulance Trans</h3>
-                                                                                    <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
-                                                                                    <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                                                    aliqua nim ad minim.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </section> -->
+                                                                                                        <div class="container">
+                                                                                                            <div class="row mb-70">
+                                                                                                                <div class="col-lg-6">
+                                                                                                                    <div class="section-heading">
+                                                                                                                        <h2 class="section-title">Core Features</h2>
+                                                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
+                                                                                                                            or incididunt ut labore et dolore magna aliqua.</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-lg-4 offset-lg-2 my-auto text-right">
+                                                                                                                    <a href="about.html" class="site-btn white">Learn More</a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-lg-12">
+                                                                                                                    <div class="feature-carousel owl-carousel">
+                                                                                                                        <div class="singel-core-feature-box text-center">
+                                                                                                                            <div class="icon">
+                                                                                                                                <img src="assets/images/icons/feature-icon-04.png" alt="">
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h3 class="title">24/7 Ambulance Trans</h3>
+                                                                                                                                <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                                                                                                aliqua nim ad minim.</p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="singel-core-feature-box text-center">
+                                                                                                                            <div class="icon">
+                                                                                                                                <img src="assets/images/icons/feature-icon-05.png" alt="">
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h3 class="title">Research & Test</h3>
+                                                                                                                                <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                                                                                                aliqua nim ad minim.</p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="singel-core-feature-box text-center">
+                                                                                                                            <div class="icon">
+                                                                                                                                <img src="assets/images/icons/feature-icon-06.png" alt="">
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h3 class="title">Make Appointment</h3>
+                                                                                                                                <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                                                                                                aliqua nim ad minim.</p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="singel-core-feature-box text-center">
+                                                                                                                            <div class="icon">
+                                                                                                                                <img src="assets/images/icons/feature-icon-04.png" alt="">
+                                                                                                                            </div>
+                                                                                                                            <div class="content">
+                                                                                                                                <h3 class="title">24/7 Ambulance Trans</h3>
+                                                                                                                                <span class="shape"><img src="assets/images/ilustration/shape.png" alt=""></span>
+                                                                                                                                <p>Lorem ipsum dolor sit amet, consectet ur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                                                                                                aliqua nim ad minim.</p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </section> -->
     <!-- core feature area end -->
 
     <!-- contact area start -->
@@ -643,28 +713,28 @@
 
     <!-- video section start -->
     <!-- <section class="video-area bg_img pt-160 pb-160" data-overlay="94" data-background="assets/images/bg/video-bg.jpg">
-                                                            <div class="container">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <div class="video-content text-center">
-                                                                            <div class="video-button-trigger">
-                                                                                <a href="//www.youtube.com/embed/4xe72U7mXNg?rel=0&amp;controls=0&amp;showinfo=0" class="video-btn"
-                                                                                    data-rel="lightcase:myCollection"><i class="fa fa-play"></i></a>
-                                                                                <span class="intro">Intro Video</span>
-                                                                            </div>
-                                                                            <div class="section-heading">
-                                                                                <h2 class="section-title">Clinical Investigators, Physicians, Pharmacists
-                                                                                Nurses, or Patients & Caregiver.</h2>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="video-shape">
-                                                                <span><img src="assets/images/icons/video-icon-01.png" alt=""></span>
-                                                                <span><img src="assets/images/icons/video-icon-02.png" alt=""></span>
-                                                            </div>
-                                                        </section> -->
+                                                                                                        <div class="container">
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-lg-12">
+                                                                                                                    <div class="video-content text-center">
+                                                                                                                        <div class="video-button-trigger">
+                                                                                                                            <a href="//www.youtube.com/embed/4xe72U7mXNg?rel=0&amp;controls=0&amp;showinfo=0" class="video-btn"
+                                                                                                                                data-rel="lightcase:myCollection"><i class="fa fa-play"></i></a>
+                                                                                                                            <span class="intro">Intro Video</span>
+                                                                                                                        </div>
+                                                                                                                        <div class="section-heading">
+                                                                                                                            <h2 class="section-title">Clinical Investigators, Physicians, Pharmacists
+                                                                                                                            Nurses, or Patients & Caregiver.</h2>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="video-shape">
+                                                                                                            <span><img src="assets/images/icons/video-icon-01.png" alt=""></span>
+                                                                                                            <span><img src="assets/images/icons/video-icon-02.png" alt=""></span>
+                                                                                                        </div>
+                                                                                                    </section> -->
     <!-- video section end -->
 
     <!-- sponser area start -->

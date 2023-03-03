@@ -2,8 +2,7 @@
 
 @section('content')
     <!-- breadcrumb area start -->
-    <section class="breadcrumb-area bg_img pb-160" data-overlay="8"
-        data-background="assets/images/bg/about-breadcrumb-bg.jpeg">
+    <section class="breadcrumb-area bg_img pb-160" data-overlay="8" data-background="assets/images/uploads/cart.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -21,9 +20,7 @@
         </div>
     </section>
     <!-- breadcrumb area end -->
-    <div id="princeton">
-        <cart />
-    </div>
+    <cart :items={{ json_encode($items) }}></cart>
 @endsection
 @push('scripts')
     <script src="https://checkout.flutterwave.com/v3.js"></script>

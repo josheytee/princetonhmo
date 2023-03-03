@@ -5255,6 +5255,55 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cards.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cards.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    hover: function hover(e) {
+      if (e == 'blue') {
+        this.$refs.blue.classList.add('active');
+        this.$refs.blue.setAttribute('data-overlay', '94'); // this.$refs.blue.setAttribute('data-background', 'assets/images/bg/pricing-bg-01.jpeg')
+
+        this.$refs.royal.classList.remove('active');
+        this.$refs.royal.removeAttribute('data-overlay'); // this.$refs.royal.removeAttribute('data-background')
+
+        this.$refs.platinum.removeAttribute('data-overlay'); // this.$refs.platinum.removeAttribute('data-background')
+
+        this.$refs.platinum.classList.remove('active');
+      } else if (e == 'royal') {
+        this.$refs.blue.classList.remove('active');
+        this.$refs.royal.classList.add('active');
+        this.$refs.platinum.classList.remove('active');
+        this.$refs.royal.setAttribute('data-overlay', '94'); // this.$refs.royal.setAttribute('data-background', 'assets/images/bg/pricing-bg-01.jpeg')
+
+        this.$refs.blue.removeAttribute('data-overlay'); // this.$refs.blue.removeAttribute('data-background')
+
+        this.$refs.platinum.removeAttribute('data-overlay'); // this.$refs.platinum.removeAttribute('data-background')
+      } else if (e == 'platinum') {
+        this.$refs.blue.classList.remove('active');
+        this.$refs.royal.classList.remove('active');
+        this.$refs.platinum.classList.add('active');
+        this.$refs.platinum.setAttribute('data-overlay', '94'); // this.$refs.platinum.setAttribute('data-background', 'assets/images/bg/pricing-bg-01.jpeg')
+
+        this.$refs.blue.removeAttribute('data-overlay'); // this.$refs.blue.removeAttribute('data-background')
+
+        this.$refs.royal.removeAttribute('data-overlay'); // this.$refs.royal.removeAttribute('data-background')
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cart.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cart.vue?vue&type=script&lang=js& ***!
@@ -5267,12 +5316,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['items'],
+  data: function data() {
+    return {
+      //
+      quantity: 1
+    };
+  },
+  computed: {
+    //
+    getTotaal: function getTotaal() {
+      var _this = this;
+
+      return this.items.reduce(function (total, item) {
+        return total + item.price * _this.quantity;
+      }, 0);
+    }
+  },
   methods: {
     makePayment: function makePayment() {
       FlutterwaveCheckout({
         public_key: "FLWPUBK_TEST-da8a7db5ca9da809b2d4298da06aa5ba-X",
         tx_ref: "titanic-48981487343MDI0NzMx",
-        amount: 50000,
+        amount: this.getTotaal,
         currency: "NGN",
         payment_options: "card, banktransfer, ussd",
         redirect_url: "https://flutterwave-blog-test.netlify.app/",
@@ -5297,6 +5363,288 @@ __webpack_require__.r(__webpack_exports__);
     console.log('Component mounted.');
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Providers.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Providers.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Providers"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cards.vue?vue&type=template&id=767212f0&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cards.vue?vue&type=template&id=767212f0& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("section", {
+    staticClass: "pricing-area pt-120 pb-120 bg-2"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "row mt-none-30 align-items-center no-gutters"
+  }, [_c("div", {
+    staticClass: "col-xl-4 col-lg-6 col-md-6 mt-30",
+    on: {
+      mouseover: function mouseover($event) {
+        return _vm.hover("blue");
+      }
+    }
+  }, [_c("div", {
+    ref: "blue",
+    staticClass: "single-pricing-box"
+  }, [_vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("a", {
+    staticClass: "site-btn transparent",
+    attrs: {
+      href: _vm.route("pages.cart", {
+        plan: "individual",
+        type: "blue"
+      })
+    }
+  }, [_vm._v("Buy Now")]), _vm._v(" "), _vm._m(3)])]), _vm._v(" "), _c("div", {
+    staticClass: "col-xl-4 col-lg-6 col-md-6 mt-30",
+    on: {
+      mouseover: function mouseover($event) {
+        return _vm.hover("royal");
+      }
+    }
+  }, [_c("div", {
+    ref: "royal",
+    staticClass: "single-pricing-box bg_img active",
+    attrs: {
+      "data-overlay": "94"
+    }
+  }, [_vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _c("a", {
+    staticClass: "site-btn transparent",
+    attrs: {
+      href: _vm.route("pages.cart", {
+        plan: "individual",
+        type: "royal"
+      })
+    }
+  }, [_vm._v("Buy Now")]), _vm._v(" "), _vm._m(6)])]), _vm._v(" "), _c("div", {
+    staticClass: "col-xl-4 col-lg-6 col-md-6 mt-30",
+    on: {
+      mouseover: function mouseover($event) {
+        return _vm.hover("platinum");
+      }
+    }
+  }, [_c("div", {
+    ref: "platinum",
+    staticClass: "single-pricing-box"
+  }, [_vm._m(7), _vm._v(" "), _vm._m(8), _vm._v(" "), _c("a", {
+    staticClass: "site-btn transparent",
+    attrs: {
+      href: _vm.route("pages.cart", {
+        plan: "individual",
+        type: "platinum"
+      })
+    }
+  }, [_vm._v("Buy Now")]), _vm._v(" "), _vm._m(9)])])])])]);
+};
+
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "row justify-content-center"
+  }, [_c("div", {
+    staticClass: "col-lg-12 text-center"
+  }, [_c("div", {
+    staticClass: "section-heading mb-70"
+  }, [_c("h4", {
+    staticClass: "sub-title"
+  }, [_vm._v("pricing")]), _vm._v(" "), _c("h2", {
+    staticClass: "section-title"
+  }, [_vm._v("Price & Plans"), _c("span", [_vm._v(".")])])])])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "pricing-head"
+  }, [_c("h4", {
+    staticClass: "title"
+  }, [_vm._v("Blue")]), _vm._v(" "), _c("h2", {
+    staticClass: "price"
+  }, [_c("span", [_vm._v("₦")]), _vm._v("30,000")]), _vm._v(" "), _c("h6", {
+    staticClass: "duration"
+  }, [_vm._v("Yearly")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "pricing-list"
+  }, [_c("ul", [_c("li", [_vm._v("CONSULTATION"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("PSYSIOTHERAPY SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OBSTETRICS AND GYNAECOLOGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("NEONATAL/PEDIATRIC SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("ACCIDENTS AND EMERGENCIES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("DENTAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OPHTHALMOLOGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OTOLARYNGOLOGICAL (ENT) SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("SURGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("ADMISSION SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OTHER SERVICES/BENEFITS"), _c("i", {
+    staticClass: "fal fa-check"
+  })])])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "shape"
+  }, [_c("img", {
+    attrs: {
+      src: "assets/images/icons/pricing-icon.png",
+      alt: ""
+    }
+  })]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "pricing-head"
+  }, [_c("h4", {
+    staticClass: "title"
+  }, [_vm._v("Royal")]), _vm._v(" "), _c("h2", {
+    staticClass: "price"
+  }, [_c("span", [_vm._v("₦")]), _vm._v("52,000")]), _vm._v(" "), _c("h6", {
+    staticClass: "duration"
+  }, [_vm._v("Monthly")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "pricing-list"
+  }, [_c("ul", [_c("li", [_vm._v("CONSULTATION"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("PSYSIOTHERAPY SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OBSTETRICS AND GYNAECOLOGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("NEONATAL/PEDIATRIC SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("ACCIDENTS AND EMERGENCIES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("DENTAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OPHTHALMOLOGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OTOLARYNGOLOGICAL (ENT) SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("SURGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("ADMISSION SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OTHER SERVICES/BENEFITS"), _c("i", {
+    staticClass: "fal fa-check"
+  })])])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "shape"
+  }, [_c("img", {
+    attrs: {
+      src: "assets/images/icons/pricing-icon.png",
+      alt: ""
+    }
+  })]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "pricing-head"
+  }, [_c("h4", {
+    staticClass: "title"
+  }, [_vm._v("Platinum")]), _vm._v(" "), _c("h2", {
+    staticClass: "price"
+  }, [_c("span", [_vm._v("₦")]), _vm._v("90,000")]), _vm._v(" "), _c("h6", {
+    staticClass: "duration"
+  }, [_vm._v("Monthly")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "pricing-list"
+  }, [_c("ul", [_c("li", [_vm._v("CONSULTATION"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("PSYSIOTHERAPY SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OBSTETRICS AND GYNAECOLOGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("NEONATAL/PEDIATRIC SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("ACCIDENTS AND EMERGENCIES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("DENTAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OPHTHALMOLOGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OTOLARYNGOLOGICAL (ENT) SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("SURGICAL SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("ADMISSION SERVICES"), _c("i", {
+    staticClass: "fal fa-check"
+  })]), _vm._v(" "), _c("li", [_vm._v("OTHER SERVICES/BENEFITS"), _c("i", {
+    staticClass: "fal fa-check"
+  })])])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "shape"
+  }, [_c("img", {
+    attrs: {
+      src: "assets/images/icons/pricing-icon.png",
+      alt: ""
+    }
+  })]);
+}];
+render._withStripped = true;
+
 
 /***/ }),
 
@@ -5328,39 +5676,73 @@ var render = function render() {
     attrs: {
       action: "#"
     }
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "table-content table-responsive"
+  }, [_c("table", {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.items, function (item) {
+    return _c("tr", [_c("td", {
+      staticClass: "product-name"
+    }, [_c("a", {
+      attrs: {
+        href: _vm.route("pages." + item.name)
+      }
+    }, [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.type))])]), _vm._v(" "), _c("td", {
+      staticClass: "product-price"
+    }, [_c("span", {
+      staticClass: "amount"
+    }, [_vm._v("₦" + _vm._s(item.price))])]), _vm._v(" "), _c("td", {
+      staticClass: "product-quantity"
+    }, [_c("div", {
+      staticClass: "cart-plus-minus"
+    }, [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: _vm.quantity,
+        expression: "quantity"
+      }],
+      attrs: {
+        type: "number",
+        value: "1"
+      },
+      domProps: {
+        value: _vm.quantity
+      },
+      on: {
+        input: function input($event) {
+          if ($event.target.composing) return;
+          _vm.quantity = $event.target.value;
+        }
+      }
+    })])]), _vm._v(" "), _c("td", {
+      staticClass: "product-subtotal"
+    }, [_c("span", {
+      staticClass: "amount"
+    }, [_vm._v("₦" + _vm._s(item.price * _vm.quantity))])]), _vm._v(" "), _vm._m(1, true)]);
+  }), 0)])]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-md-5 ml-auto"
   }, [_c("div", {
     staticClass: "cart-page-total"
-  }, [_c("h2", [_vm._v("Cart totals")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("a", {
+  }, [_c("h2", [_vm._v("Cart totals")]), _vm._v(" "), _c("ul", {
+    staticClass: "mb-20"
+  }, [_c("li", [_vm._v("Total "), _c("span", [_vm._v("₦" + _vm._s(_vm.getTotaal) + ".00")])])]), _vm._v(" "), _c("a", {
     staticClass: "site-btn red",
     attrs: {
-      href: "#"
-    },
-    on: {
-      click: function click($event) {
-        $event.preventDefault();
-        return _vm.makePayment();
-      }
+      href: _vm.route("pages.checkout")
     }
-  }, [_vm._v("Proceed to\n                                    checkout")])])])])])])])])]);
+  }, [_vm._v("\n                                    Proceed to checkout\n                                ")])])])])])])])])]);
 };
 
 var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "table-content table-responsive"
-  }, [_c("table", {
-    staticClass: "table"
-  }, [_c("thead", [_c("tr", [_c("th", {
-    staticClass: "product-thumbnail"
-  }, [_vm._v("Images")]), _vm._v(" "), _c("th", {
+  return _c("thead", [_c("tr", [_c("th", {
     staticClass: "cart-product-name"
-  }, [_vm._v("Product")]), _vm._v(" "), _c("th", {
+  }, [_vm._v("Health Plan")]), _vm._v(" "), _c("th", {
     staticClass: "product-price"
   }, [_vm._v("Unit Price")]), _vm._v(" "), _c("th", {
     staticClass: "product-quantity"
@@ -5368,41 +5750,12 @@ var staticRenderFns = [function () {
     staticClass: "product-subtotal"
   }, [_vm._v("Total")]), _vm._v(" "), _c("th", {
     staticClass: "product-remove"
-  }, [_vm._v("Remove")])])]), _vm._v(" "), _c("tbody", [_c("tr", [_c("td", {
-    staticClass: "product-thumbnail"
-  }, [_c("a", {
-    attrs: {
-      href: "#"
-    }
-  }, [_c("img", {
-    attrs: {
-      src: "assets/images/shop/img1.jpg",
-      alt: ""
-    }
-  })])]), _vm._v(" "), _c("td", {
-    staticClass: "product-name"
-  }, [_c("a", {
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Bakix Furniture")])]), _vm._v(" "), _c("td", {
-    staticClass: "product-price"
-  }, [_c("span", {
-    staticClass: "amount"
-  }, [_vm._v("$130.00")])]), _vm._v(" "), _c("td", {
-    staticClass: "product-quantity"
-  }, [_c("div", {
-    staticClass: "cart-plus-minus"
-  }, [_c("input", {
-    attrs: {
-      type: "text",
-      value: "1"
-    }
-  })])]), _vm._v(" "), _c("td", {
-    staticClass: "product-subtotal"
-  }, [_c("span", {
-    staticClass: "amount"
-  }, [_vm._v("$130.00")])]), _vm._v(" "), _c("td", {
+  }, [_vm._v("Remove")])])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("td", {
     staticClass: "product-remove"
   }, [_c("a", {
     attrs: {
@@ -5410,93 +5763,9731 @@ var staticRenderFns = [function () {
     }
   }, [_c("i", {
     staticClass: "fa fa-times"
-  })])])]), _vm._v(" "), _c("tr", [_c("td", {
-    staticClass: "product-thumbnail"
-  }, [_c("a", {
-    attrs: {
-      href: "#"
-    }
-  }, [_c("img", {
-    attrs: {
-      src: "assets/images/shop/img2.jpg",
-      alt: ""
-    }
-  })])]), _vm._v(" "), _c("td", {
-    staticClass: "product-name"
-  }, [_c("a", {
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Sujon Chair Set")])]), _vm._v(" "), _c("td", {
-    staticClass: "product-price"
-  }, [_c("span", {
-    staticClass: "amount"
-  }, [_vm._v("$120.50")])]), _vm._v(" "), _c("td", {
-    staticClass: "product-quantity"
-  }, [_c("div", {
-    staticClass: "cart-plus-minus"
-  }, [_c("input", {
-    attrs: {
-      type: "text",
-      value: "1"
-    }
-  })])]), _vm._v(" "), _c("td", {
-    staticClass: "product-subtotal"
-  }, [_c("span", {
-    staticClass: "amount"
-  }, [_vm._v("$120.50")])]), _vm._v(" "), _c("td", {
-    staticClass: "product-remove"
-  }, [_c("a", {
-    attrs: {
-      href: "#"
-    }
-  }, [_c("i", {
-    staticClass: "fa fa-times"
-  })])])])])])]);
-}, function () {
+  })])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Providers.vue?vue&type=template&id=290e41c7&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Providers.vue?vue&type=template&id=290e41c7& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "row"
-  }, [_c("div", {
-    staticClass: "col-12"
-  }, [_c("div", {
-    staticClass: "coupon-all"
-  }, [_c("div", {
-    staticClass: "coupon"
-  }, [_c("input", {
-    staticClass: "input-text",
-    attrs: {
-      id: "coupon_code",
-      name: "coupon_code",
-      value: "",
-      placeholder: "Coupon code",
-      type: "text"
-    }
-  }), _vm._v(" "), _c("button", {
-    staticClass: "site-btn",
-    attrs: {
-      name: "apply_coupon",
-      type: "submit"
-    }
-  }, [_vm._v("Apply\n                                        coupon")])]), _vm._v(" "), _c("div", {
-    staticClass: "coupon2"
-  }, [_c("input", {
-    staticClass: "site-btn red",
-    attrs: {
-      name: "update_cart",
-      value: "Update cart",
-      type: "submit"
-    }
-  })])])])]);
-}, function () {
+  return _vm._m(0);
+};
+
+var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("ul", {
-    staticClass: "mb-20"
-  }, [_c("li", [_vm._v("Subtotal "), _c("span", [_vm._v("$250.00")])]), _vm._v(" "), _c("li", [_vm._v("Total "), _c("span", [_vm._v("$250.00")])])]);
+  return _c("table", {
+    staticClass: "dalt-table",
+    staticStyle: {
+      width: "100%",
+      "min-width": "0px",
+      "margin-top": "20px",
+      "margin-bottom": "20px",
+      visibility: "visible"
+    },
+    attrs: {
+      id: "dalt-table-16",
+      "data-enable-sorting": "0",
+      "data-enable-manual-sorting": "0",
+      "data-show-position": "1",
+      "data-position-side": "left",
+      "data-position-label": "#",
+      "data-number-format": "0",
+      "data-order-desc-asc-1": "0",
+      "data-order-by-1": "1",
+      "data-order-data-type-1": "auto",
+      "data-order-date-format-1": "ddmmyyyy",
+      "data-order-desc-asc-2": "0",
+      "data-order-by-2": "1",
+      "data-order-data-type-2": "auto",
+      "data-order-date-format-2": "ddmmyyyy",
+      "data-order-desc-asc-3": "0",
+      "data-order-by-3": "1",
+      "data-order-data-type-3": "auto",
+      "data-order-date-format-3": "ddmmyyyy",
+      "data-order-desc-asc-4": "0",
+      "data-order-by-4": "1",
+      "data-order-data-type-4": "auto",
+      "data-order-date-format-4": "ddmmyyyy",
+      "data-order-desc-asc-5": "0",
+      "data-order-by-5": "1",
+      "data-order-data-type-5": "auto",
+      "data-order-date-format-5": "ddmmyyyy",
+      "data-table-width": "0",
+      "data-table-width-value": "400",
+      "data-table-minimum-width": "0",
+      "data-table-margin-top": "20",
+      "data-table-margin-bottom": "20",
+      "data-enable-container": "0",
+      "data-container-width": "400",
+      "data-container-height": "400",
+      "data-header-font-size": "14",
+      "data-header-font-family": "'Open Sans', Helvetica, Arial, sans-serif",
+      "data-header-font-weight": "400",
+      "data-header-font-style": "normal",
+      "data-header-background-color": "#182ca0",
+      "data-header-font-color": "#FFFFFF",
+      "data-header-link-color": "#FFFFFF",
+      "data-header-border-color": "#ddadad",
+      "data-header-position-alignment": "center",
+      "data-body-font-size": "13",
+      "data-body-font-family": "'Open Sans', Helvetica, Arial, sans-serif",
+      "data-body-font-weight": "400",
+      "data-body-font-style": "normal",
+      "data-even-rows-background-color": "#f4e8ee",
+      "data-odd-rows-background-color": "#FCFCFC",
+      "data-even-rows-font-color": "#666666",
+      "data-even-rows-link-color": "#C3512F",
+      "data-odd-rows-font-color": "#666666",
+      "data-odd-rows-link-color": "#C3512F",
+      "data-rows-border-color": "#E1E1E1",
+      "data-autocolors-priority": "rows",
+      "data-autocolors-affected-rows-1": "",
+      "data-autocolors-rows-background-color-1": "#FFFFFF",
+      "data-autocolors-rows-font-color-1": "#666666",
+      "data-autocolors-affected-rows-2": "",
+      "data-autocolors-rows-background-color-2": "#FFFFFF",
+      "data-autocolors-rows-font-color-2": "#666666",
+      "data-autocolors-affected-rows-3": "",
+      "data-autocolors-rows-background-color-3": "#FFFFFF",
+      "data-autocolors-rows-font-color-3": "#666666",
+      "data-autocolors-affected-rows-4": "",
+      "data-autocolors-rows-background-color-4": "#FFFFFF",
+      "data-autocolors-rows-font-color-4": "#666666",
+      "data-autocolors-affected-rows-5": "",
+      "data-autocolors-rows-background-color-5": "#FFFFFF",
+      "data-autocolors-rows-font-color-5": "#666666",
+      "data-autocolors-affected-columns-1": "",
+      "data-autocolors-columns-background-color-1": "#FFFFFF",
+      "data-autocolors-columns-font-color-1": "#666666",
+      "data-autocolors-affected-columns-2": "",
+      "data-autocolors-columns-background-color-2": "#FFFFFF",
+      "data-autocolors-columns-font-color-2": "#666666",
+      "data-autocolors-affected-columns-3": "",
+      "data-autocolors-columns-background-color-3": "#FFFFFF",
+      "data-autocolors-columns-font-color-3": "#666666",
+      "data-autocolors-affected-columns-4": "",
+      "data-autocolors-columns-background-color-4": "#FFFFFF",
+      "data-autocolors-columns-font-color-4": "#666666",
+      "data-autocolors-affected-columns-5": "",
+      "data-autocolors-columns-background-color-5": "#FFFFFF",
+      "data-autocolors-columns-font-color-5": "#666666",
+      "data-autoalignment-priority": "rows",
+      "data-autoalignment-affected-rows-left": "",
+      "data-autoalignment-affected-rows-center": "",
+      "data-autoalignment-affected-rows-right": "",
+      "data-autoalignment-affected-columns-left": "",
+      "data-autoalignment-affected-columns-center": "",
+      "data-autoalignment-affected-columns-right": "",
+      "data-tablet-breakpoint": "989",
+      "data-hide-tablet-list": "",
+      "data-tablet-header-font-size": "11",
+      "data-tablet-body-font-size": "11",
+      "data-tablet-hide-images": "0",
+      "data-phone-breakpoint": "479",
+      "data-hide-phone-list": "",
+      "data-phone-header-font-size": "11",
+      "data-phone-body-font-size": "11",
+      "data-phone-hide-images": "0",
+      "data-enable-cell-properties": "1"
+    }
+  }, [_c("thead", [_c("tr", [_c("th", {
+    staticStyle: {
+      padding: "9px 13px",
+      "line-height": "20px",
+      "font-size": "14px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      color: "rgb(255, 255, 255)",
+      "background-color": "rgb(24, 44, 160)",
+      "border-color": "rgb(221, 173, 173)",
+      "text-align": "center"
+    }
+  }, [_vm._v("#")]), _vm._v(" "), _c("th", {
+    staticStyle: {
+      padding: "9px 13px",
+      "line-height": "20px",
+      "font-size": "14px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      color: "rgb(255, 255, 255)",
+      "background-color": "rgb(24, 44, 160)",
+      "border-color": "rgb(221, 173, 173)"
+    }
+  }, [_vm._v("STATE ")]), _c("th", {
+    staticStyle: {
+      padding: "9px 13px",
+      "line-height": "20px",
+      "font-size": "14px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      color: "rgb(255, 255, 255)",
+      "background-color": "rgb(24, 44, 160)",
+      "border-color": "rgb(221, 173, 173)"
+    }
+  }, [_vm._v("PROVIDER NAME ")]), _c("th", {
+    staticStyle: {
+      padding: "9px 13px",
+      "line-height": "20px",
+      "font-size": "14px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      color: "rgb(255, 255, 255)",
+      "background-color": "rgb(24, 44, 160)",
+      "border-color": "rgb(221, 173, 173)"
+    }
+  }, [_vm._v("ADDRESS")])])]), _vm._v(" "), _c("tbody", [_c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ABIA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NEW ERA HOSPITAL LIMITED ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("213/215 NNAMDI AZIKWE ROAD, ABIA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SPRING CLINICS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("18, SCOTLAND CRESCENT, OFF CONSTITUTION ROAD, ABIA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("3")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEST CARE SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("6,MADUAKE CLOSE,OFF AHUNYA AVENUE ,UMUNGASI ABIA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("4")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ALL SAINT HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("25 ITEM STREET,UMUAHIA, ABIA.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ABUJA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HORIZON MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 77, BOUAKE STREET, WUSE, ZONE 6")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("6")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)",
+      "text-align": "center"
+    },
+    attrs: {
+      "data-cell-properties": "true",
+      "data-text-color": "",
+      "data-background-color": "",
+      "data-font-weight": "400",
+      "data-font-style": "normal",
+      "data-link-color": "",
+      "data-alignment": "center"
+    }
+  }, [_vm._v("LIMI HOSPITAL & MATERNITY LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 541, OFF CONSTITUTION AVENUE, BEHIND ICPC/NDIC ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("7")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FORTRESS EYE AND MATERNITY HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("WUSE 11 PAAFAG HOSPITAL FHA ESTATE,LUGBE ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("8")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ROYAL LORDS HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 107,ZONE 4 DUTSE ALHAJI,ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("9")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ADONAI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2 ADONAI CLOSE OFF OLD KARU ROAD,MARABA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("10")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AREWA SPECIALIST HOSPITAL & DIAGNOSTIC CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("31 ALEX EKWUEME WAY JABI DISTRICT F.C.T ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("11")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GWARINPA GENERAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LIFE CAMP FCT ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("12")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SYBRON MEDICAL CENTRAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("25 MUNGO PARK CLOSE OPP. HAVISTA HOTEL ASOKORO FCT ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("13")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. PATRICKS, CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AREA F BESIDE POLICE STATION NYANYA FCT ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("14")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JALINGO MEDICAL CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 53 PHASE 2 OPPOSITE AREA A NYANYA FCT ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("15")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PRIMARY HEALTH CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BLOCK 5 F CLOSE 1ST AVENUE GWARIMPA ESTATE FCT ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("16")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MIDLAND CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 144 KARU SITE ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("17")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("UNITY CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT D1 PHASE 2 SITE 1 SADO NASKO ROAD KUBWA ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("18")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. GEORGES HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("35 FIRST AVENUE GWARINPA 2 ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("19")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SUMIT HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("USHAFA ROAD NEAR ASO BANK BWARI ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("20")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KINGS CARE HOSPITAL LTD., KUBWA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("7 CHRISMS STR. BEHIND POLICE QUARTERS PHASE 4 KUBWA ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("21")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GRACE OF GOD SPECIALIST MED. CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PHASE 2 SITE 2 KUBWA ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("22")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KUBWA GENERAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OPPOSITE GSS KUBWA PHASE 4 ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("23")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. VINCENT CLINIC & MAT. DAUGHTERS OF CHARITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BIAJI ROAD KUBWA ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("24")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ROYAL LORDS HOSPITAL & CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 107 ZONE 4 DUTSE ALHAJA BWARI AREA COUNCIL ABUJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("25")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ADAMAWA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("QUEENS CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT225 COTONOU STREET, WUSE ZONE 6")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("26")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GALBOSE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ATIKU ABUBARKAR WAY, JIMETA, YOLA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("27")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PEACE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2 LUGGERE STREET, BESIDE ST THERESA CATHEDRAL")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("28")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NEW LIFE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GSS ROAD, LOKWA QUARTERS, SABON LAYI, MUBI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("29")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AKWA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IBOM UBONG ABASI SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5, CLEMENT ISONG ROAD, FHA ESTATE, ABIA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("30")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LIFECARE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("6, UDOSEN UKO STREET, UYO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("31")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GOOD SHEPERD HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("75 EKET ORON ROAD,EKET AKWA IBOM")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("32")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ANAMBRA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LIFE SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("7 IKEMBA DRIVE, UMUDIM, NNEWI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("33")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CHIMEX SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO. 87 EZEMEMA ROAD, NNEWICHI, NNEWI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("34")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BAUCHI ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NIIMA CONSULTANT HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AIRPORT ROAD, G. R. A.`BAUCHI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("35")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BAYELSA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("YENAGOA HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BAYELSA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("36")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BENUE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IMMACULATE CONCEPTION ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("WALLAM MAYO, HIGH LEVEL, MAKURDI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("37")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("45 NIGERIAN AIRFORCE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AIRFORCE BASE, MAKURDI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("38")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JOPES SPECIALIST HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("86 CAPT. DOWNES ROAD, ADEKA, GBOKO, BENUE STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("39")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BISHOP MURRAY MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HIGH LEVEL, MARKURDI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("40")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST DANIEL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND ELLIPI MOTOR PARK OTUKPO,BENUE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("41")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MADONA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NEW BRIDGE ROAD, BEHIND UNION BANK, MARKURDI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("42")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BORNO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NAKOWA SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAGOS STREET, OLD GRA, MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("43")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KANEM HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("152, TAFAWA BALEWA WAY, MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("44")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("STATE SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MAIDUGURU, BORNO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("45")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BORNO MEDICAL CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO.8, SIR KASHIM IBRAHIM WAY")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("46")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FOUNDATION HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO. 340, SABON LAMBA STREET, GALADIMA JUNCTION, MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("47")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NURSING HOME, MAIDUGURI ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND NHIS ZONAL OFFICE, OFF SHEHU LAMINU WAY, MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("48")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AYAMSU MEMORIAL MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("17 BUKAR BOLORI STREET, KUMSHE WARD MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("49")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FEDERAL STAFF CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FEDERAL SECRETARIAT, MAIDUGURI, BORNO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("50")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("331 AR MRS BIU ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BORNO, BORNO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("51")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GOSPEL MISSION TO NIGERIA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("G260 GALDIMARE, BIU, BAUCHI STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("52")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HIRKU CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DAMATURU ROAD, BIU, BORNO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("53")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ABBOTT CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DAMATURU ROAD, BIU, BORNO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("54")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("UNIVERSITY OF MAIDUGURI STAFF CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BAMA ROAD, MAIDUGURI, BORNO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("55")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DOMINION MATERNITY HOME ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OFF NAF BASE, BULUNKUTU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("56")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("UNITY CLINICS & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLD GRA, NEAR GOVT HOUSE, MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("57")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NGANTUKU DRUGS & MEDICAL SERVICES ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DAMBOA RD.OFF BUNU SHERIF STR.MAIDUGURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("58")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CROSSRIVER ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AMAZING GRACE SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("45, IKOT UDUAK STR, OFF MCC ROAD, CALABAR, C/RIVER STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("59")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GBEYE CLINIC & MATERNITY CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("16 AHOADA ROAD,OMOKU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("60")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DELTA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CREST CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("30, EZENEI AVENUE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("61")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ICON CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("303 NNEBISI ROAD, WARRI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("62")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EBONY CLINIC&MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("109,OKUMAGBA AVENU,BY OJABIUGBE JUNCTION WARRI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("63")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EBONYI ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("TWINS CLINIC 1 TWINS CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DRIVE, OFF DECO ROAD, WARRI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("64")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CHRIST THE KING HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("85, AFIKPO ROAD, ABAKALIKI, EBONYI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("65")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EDO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HOPE CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1,WHITEHOUSE STREET, JATAU, EDO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("66")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EKITI ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SUPREME FAITH HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ADO EKITI,EKITI STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("67")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IRRUA SPECIALIST TEACHING HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("11, OKEBOLA STREET, ADO EKITI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("68")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ENUGU ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PEENOK MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("24 ZIK AVENUE, UWANI, ENUGU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("69")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AKULUE MEMORIAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("16/18 AKULUE ROAD, ONUIYI, NSUKKA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("70")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NTASIOBI SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ENUGU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("71")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CHRIST THE KING HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO 18 EMEKA ABALU ROAD,PHASE 6 TRANS EKULU ENUGU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("72")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GOMBE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NIGER FOUNDATION HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5 COMMERCIAL AREA, GOMBE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("73")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GENERAL HOSPITAL, BILLIRI ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 60 GOMBE ROAD GOMBE STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("74")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FEDERAL MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FMC GOMBE STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("75")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MIYELTI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FEDRAL LOW COST ROAD AFTER DUKKU MOTOR GOMBE STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("76")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("YARMA MEMORIAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("54 BUBA SHONGO QTRS GOMBE STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("77")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MUSABA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DUKKU ROAD GOMBE STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("78")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IMO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EBUBEDIKE MEMORIAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("71, OPARANOZIE STR. OWERRI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("79")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("UMEZURIKE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("21 UMEZURIKE STREET, OWERRI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("80")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KADUNA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. GERARD CATHOLIC HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KAKURI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("81")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ALBA CLINIC & MATERNITY CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("25 CONSTITUTION ROAD, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("82")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SALAMAT INFIRMARY HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2 SOKOTO ROAD, KWANGILA JUNCTION, ARIA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("83")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("COVENANT HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AU, BENIN STREET, P. O. BOX 586, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("84")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GARKUWA SPECIALIST ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1A, SULTAN ROAD, OFF ISA KUITA ROAD, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("85")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ISHAKU HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2 JUNCTION ROAD, NEAR STATION ROUND ABOUT, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("86")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JAWACO HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JOS ROAD, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("87")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("TIM UNITY HOSPITAL AND MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BZ5 SARDAUNA CRESCENT, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("88")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MANEKS HOSPITAL LIMITED ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("A1 BLOCK 5, MAKERA ROAD, KAKURI, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("89")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FOUNTAIN HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AP 13 COMMUNITY BANK ROAD,PRP B/S,GAMAGIRA,TUDUN WADA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("90")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KADUNA POLYTECHNIC MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KADUNA POLYTECHNIC, TUNDUN WADA, KADUNA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("91")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KANO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PREMIER CLINICS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("8, FIRST AVENUE, OFF COURT ROAD,GYADI GYADI, KANO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("92")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("INTERNATIONAL CLINIC & HOSPITAL LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("40, NIGER STREET/ 2A, AIRPORT ROAD,OFF MURTALA MUHAMMED WAY,KANO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("93")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NASARA CLINICS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("P.O BOX 286 KONTAGORA P.O.BOX,KANO,KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("94")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MEDICUS CLINICS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("N0 19, MAGAJIN RUNFAI ROAD NASARAWA G.R.A. KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("95")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CLASSIC CLINIC LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO 1A, ABBAS ROAD/ARAKAN AVENUE P.O. BOX 244 NASARAWA G.R.A.KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("96")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IDEAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO 74, EMIR ROAD S/GARI KANO,KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("97")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BAREWA CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO 11, ZARIA ROAD KANO,KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("98")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GENERAL HOSPITAL, WUDIL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GAYA ROAD WUDIL LOCAL GORNERVMENT AREA KANO,KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("99")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MOHAMMED ABDULLAHI WASE SPEC HOSP ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("YASARAWA GRA KANO,KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("100")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SHEIKH MOHAMMED JIDA GENERAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO 72, MURTALA MUHAMMED WAY KANO,KANO STATE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("101")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AMINU KANO TEACHING HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("P.M.B 3452, ZARIA ROAD KANO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("102")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KATSINA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KHADIJA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("53, KATSINA ROAD, FUNTUA. ")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("103")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KOGI ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NEW MILLENIUM CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ROAD 1, FLAT 24A & 24B IMO ESTATE, AJUENCO ROAD, AJAOKUTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("104")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GENERAL HOSPITAL,OKENE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OKENE,KOGI STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("105")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("POLY HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JANET EKUNDAYO ROAD,LOKOJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("106")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ECWA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MISSION ROAD,EGBE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("107")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KWARA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AYODELE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("290, LAGOS ROAD, SAWMAIL, ILORIN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("108")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLALOMI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("STADIUM ROAD, ILORIN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("109")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAGOS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DE NEW AIYETORO MEDICAL CENRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("3, SAMSON STR, IBASA-NLA AIYETORO, NEAR IJANIKIN OJO LGA BADAGRY EXP. WAY, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("110")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CRYSTAL SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("148, AKOWONJO ROAD, DOPEMU, AGEGE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("111")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KUPA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("4, LATEEF SALAMI STREET, OFF INT'L AIRPORT ROAD, AJAO ESTATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("112")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GLORIA HOSPITAL LIMITED ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("9, OLADEINDE STREET, ANTHONY VILLAGE, LAGOS.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("113")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MUCAS HOSPITAL LIMITED ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("19, OGUN STREET,ADEALU BUS STOP, DOPEMU.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("114")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SUBOL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("16/17,OBA AMUSA AVENUE,IDIMU,LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("115")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LONGING MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1, JOSEPHA CLOSE OFF OGUNTANA OGUNDEJO STREET, BY AJALA BUS-STOP.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("116")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LEX MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5, RALIAT ALABI STREET, IYANA MEIRAN IJAYE-OJOKORO, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("117")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OSUNTUYI MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("255, IJU RD., BALOGUN BUS STOP, IJU ISHAGA, AGEGE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("118")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BROAD HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("17,FEHINTOLA ST,OFF ISIJOLA ST,NEPA BUS /STOP,IKOTUN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("119")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PRINCE & PRINCESS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EGBEDA, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("120")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CHRIST MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("28,RANDLE ROAD,APAPA LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("121")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SAFEWAY HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 46 LAGOS-EPE EXPRESS ROAD, SANGOTEDO, AJAH")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("122")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GRACELAND MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("147,BADAGRY EXPRESSWAY ,OJO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("123")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KILADEJO MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("15,PPL ROAD,OKOKOMAIKO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("124")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EKO HOSPITAL, IKEJA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("31,MOBOLAJI BANK ANOTHONY WAY,IKEJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("125")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("R-JOLAD HOSPITAL NIG. LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1,AKINYEDE STREET,BY NEW GARAGE, BARIGA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("126")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SOLID ROCK HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 13, BLOCK 91, ALIU ANIMASHAUN AVENUE, LEKKI PHASE 1")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("127")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OSUNTUYI MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("9,ALHAJI SALISU STREET,OBANIKORO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("128")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SMITH MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("3, ENIASORO BEYIOKU STREET, SURULERE, LAG")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("129")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MOUNT SINAI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("177/179,BORNU WAY,EBUTE METTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("130")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST.MILLA HOPSITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("19B LADIPO OLUWOLE STR. APAPA G.R.A")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("131")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("VONES MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("9 BARIKISU, IYEDE STR., ONIKE, YABA, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("132")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ULTIMA MEDICAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("3, CAPPA AVENUE,PALMGROVE ESTATE,MUSHIN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("133")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NEWGATE HOSPITAL LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("59, LAGOS ROAD, NEWGATE BUS STOP, IKORODU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("134")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DEJI CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5, DOYIN OMOLOLU STREET, OFF MR BIGGS JUNCTION, OBA-NLE ARO BUS STOP")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("135")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IKORODU HOSPITAL/ CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("9, MUNIRATU ALOJO STREET,OFF LAGOS ROAD BY AFRIBANK,IKORODU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("136")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CITIZEN MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("86, NORMAN WILLIAMS ST.OFF KEFFI ST. IKOYI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("137")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DOREN SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1, KEMFAT ROAD, THOMAS VILLAGE, LAGOS-EPE EXP. WAY, AJAH")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("138")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NEW GRACELAND HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2 GRACELAND CLOSE, PAPA EPE, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("139")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EMEL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CLOSE, 21 ROAD,FESTAC TOWN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("140")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GOLDEN CROSS INFIRMARY HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2ND AVENUE, 22 ROAD,FESTAC TOWN, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("141")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HEALS SPECIALIST CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("40B, GODWIN OMONUA STREET, IREAKARI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("142")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SAMARIA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("17,DABO BASHORUN STREET OFF ALI DADA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("143")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST.JUDES HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("511 ROAD,A CLOSE HOUSE 3FESTAC TOWN LAGOS ")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("144")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("REDEEMED MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ELIAS CLOSE,OKOKOMAIKO LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("145")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ALL SOULS CLINIC LIMITED ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAGOS.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("146")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MOUNT SINAI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("32, OLANUBI STREET,PAPA AJAO MUSHIN.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("147")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST.MICHEAL CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 974,LAGOS-ABEOKUTA EXPRESSWAYALAKUKO B/STOP ALAGBADO.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("148")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CRI MEDICLINIC LEKKI VGC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 232,ROAD 1 VGC LEKKI EPE EXPRESSWAY,LAGOS.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("149")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CHRIST FOUNDATION HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("68 ALHAJA SINATU AJAYI ROAD, MOROGBO AGBARA, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("150")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GENERAL HOSPITAL, BADAGRY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BADAGRY.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("151")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("VICTORIA MEMORIAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MOROGBO AGBARA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("152")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FIRST FAITH MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5, KARIMU COKER,ORILE IGANMU.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("153")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PRIMEX HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("58 IGANDO RD UNITY BUS/STOP IKOTUN-EGBE LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("154")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SABO CROWN HOSPITAL & MAT. ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("4,OGUNYEMI STREET,ILAJE B/STOP,OJO ALABA INTERNATIONAL")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("155")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ERICON CLINIC & MAT ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("8 LADIPO CLOSE, OLODI APAPA LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("156")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AYODELE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("23/25, JONATHAN COKER RD, OFF FAGBA JUNCTION, IJU AGEGE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("157")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GATEWAY CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("211, MUYIBI STR, OFF PEOPLES B/STOP, OLODI APAPA, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("158")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. ANTHONY''''''''S MEDICAL CENTRE & MAT ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("19 BADAGRY EXPRESSWAY, FESTAC TOWN, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("159")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EDMAC MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("21 SAMUEL STREET, MAFOLOKU OSHODI LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("160")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AYO CLINICS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("8 ALAPERE STREET, KETU LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("161")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HANOBA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("23, BOYCE STREET, ONIKAN, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("162")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("QUEENS SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NO 3B CMD ROAD,MAGODO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("163")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ELPAHY HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("6, TASK FORCE RD, BY PPL B/S, OKOKOMAIKO, LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("164")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ZION MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("6 VISA OMOTUNDE STREET Off ELEBIJU ROAD KETU LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("165")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("EKO HOSPITAL,SURULERE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SURULERE,LAGOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("166")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NASARAWA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ADONAI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2, ADONAI CLOSE, OFF KARU ROAD, MARARABA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("167")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("NIGER ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("GOJE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OPP A DIVISION POLICE STATION, KONTAGORA, NIGER STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("168")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SUZAN MEMORIAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("UPHILL SULEJA NEAR SULEJA CLUB G.R.A  NIGER")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("169")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OGUN ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MERCY GROUP CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND UBA BUILDING ONIKOLOBO, ABEOKUTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("170")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FIRST ALPHA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KUFORIJI OLUBI DRIVE, ADIGBE, ABEOKUTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("171")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLU OLA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("12B, ODO EGBO STREET, IJEBU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("172")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MEDICARE CLINICS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 4, IDI IROKO ROAD, SANGO OTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("173")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("RUBEE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 38, ABEOKUTA EXPRESSWAY, OTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("174")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SACRED HEART HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LANTORO, ABEOKUTA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("175")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("HOPE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 2, ILARO ROAD, OWODE YEWA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("176")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("3 OWOKONIRAN STREET ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MAKUN STATION, SHAGAMU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("177")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ONDO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLUDARE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FANIBI, LAYOUT, AKURE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("178")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JOE JANE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OKE IJEBU ROAD, IJAPO ESTATE, AKURE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("179")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. JOHN & MARY HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("2, ADEBAYO ONILANE, ISIKAN ALASE, AKURE.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("180")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AJIBOYE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("90, AJIFERE STREET, ILE-OLUJI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("181")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OGUNSUSI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1, ZION ESTATE, TEMIDIRE STREET, ILE-OLUJI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("182")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CHRIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("11 ADEYEMI COLLEGE ROAD, P.O. BOX 1378, ONDO TOWN, ONDO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("183")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BABALOLA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("STATE HOSPITAL ROAD, ONDO TOWN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("184")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ARIF HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND SABO MAIN MARKET, ORE TOWN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("185")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FEDERAL MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OWO ONDO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("186")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OSUN ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ONWARD SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IWO ROAD, OKEFIA, P.O.BOX 506, IWO ROAD")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("187")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OROKI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("32, AIYETORO STREET, OLD IKIRUN ROAD, OSOGBO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("188")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BALM OF GILEAD SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OKE-OPO GRA ILESHA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("189")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST JUDE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OFF FATIMA COLLEGE LAKOSUN,IKIRE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("190")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v(" OYO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("WELFARE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND AGBOWO SHOPING COMPLEX SALAWU STREET,AGABOW IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("191")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OKE-OFA CATHOLIC HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLUYORO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("192")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. GEORGE’S NURSING HOME ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("57, OBAFEMI AWOLOWO ROAD, OKE-BOLA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("193")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("TEJU SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("8, ALHAJI ANIMASAUN STR, RING ROAD, IBADAN.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("194")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("TOUN MEMORIAL SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("KM 1/2 NEW LIFE ROAD, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("195")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("UNITY MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("31 ELEYELE ROAD, ELEYELE, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("196")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SHALOM MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SABO, OGBOMOSHO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("197")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BAPTIST MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PMB 43, FATUNDA ROAD, SAKI, OYO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("198")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLUYORO CATHOLIC HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OKE-OFFA, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("199")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BADEJOKO MEMORIAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("484, OREMEJI OPPOSITE PREMIER HOTEL, JUNCTION")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("200")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("COMFORT MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAKANMI CLOSE, OPP. STARTIMES OFFICE, TOTAL GARDEN, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("201")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLUWAYOMI HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("9B ADELEKE CLOSE , BALOGUN AREA, BASORUN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("202")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAD MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("1, LORD HOSPITAL ROAD, BESIDE POLICE BARRACKS, ORITA CHALLENGE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("203")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("TZ HOSPITAL LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AGBA-AKIN LAYOUT, IDI-APE IWO-ROAD JUNCTION")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("204")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SHALOM GROUP MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SHALOM HOUSE ABODERIN CLOSE, AGBAJE, ORITA CHALLENGE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("205")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IMMACULATE SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("23, ODUTOLA STREET, OKE ADO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("206")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IBADAN CENTRAL HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OSOSAMI, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("207")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MEDICAL PRACTITIONERS SERVICES ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("QUEEN ELIZABETH ROAD, MOKOLA ROUNDABOUT, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("208")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AGGREY HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ADEGOKE STREET, YEMETU- OJA, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("209")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LANARK SPECIALIST HOSPITA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SW9/1423, STATE HOSPITAL ROAD")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("210")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IDI-APE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLOT 2 & 6, AFOLABI LAYOUT, IDI-APE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("211")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FOREMOST BASE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LEVENTIS AREA, OREMEJI MOKOLA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("212")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("J. RAPHA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("6, AARE AVENUE, NEW BODIJA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("213")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAFIA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND UBA BANK,NNPC APATA IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("214")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. LUCIA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND OLD ODEON CINEMA, OKE-ADO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("215")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("THE VINE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLUYOLE OFF RING ROAD")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("216")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("METROPOLITAN HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MOBIL, RING ROAD")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("217")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("JOLALEKE SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OPP. STATE HOSPITAL, ADEOYO, RING ROAD")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("218")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. MARY CATHOLIC HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ELETA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("219")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("CONTINENTAL MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ORITA CHALLENGE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("220")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ALAFIA HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OPPOSITE BANIC PHOTO COMPLEX, MOKOLA R/ABOUT")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("221")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("VINE BRANCH HOSPITAL & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OLUBADAN PALACE ROAD ADJACENT VINE BRANCH CHURCH, MOKOLA")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("222")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("AYOKEMI HOSPITAL & ULTRASOUND CENTER ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BEHIND TOTAL FILLING STATION, ADEX BUS-STOP, MONATAN-IWO ROAD, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("223")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("DIVINE HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SHOP MESAN, IYANA CHURCH, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("224")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("THE PIZZAZZ HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ALONG CHALLENGE EXPRESSWAY, AFTER THE MUSIC HOUSE, CHALLENGE, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("225")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("FORTUNE HOSPITAL & DENTAL CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("OPPOSIITE AFANI ROUNDABOUT, RING RD, IBADAN")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("226")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MOLLY SPECIALIST HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("IDI APE, IBADAN, OYO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("227")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PLATEAU ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ALPHA MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("7, DILLIMI STREET, JOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("228")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ELDIN MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("12, DOGON DUTSE ROAD, JOS")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("229")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("LAWRAK HOSPITAL LTD ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("21, TEMPLE ROAD, OFF MIANGO, JOS.")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("230")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("RIVERS ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ST. MARTINS HOSPITAL ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("28B FLAMING AVENUE, RUMEOMASI, PORTHACOURT")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("231")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("PAMO CLINIC & MATERNITY ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("300, ABA ROAD, RUMEOMASI")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("232")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SOKOTO ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SHEPHERD SPECIALIST CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("25 SHUNI ROAD, MABERA, SOKOTO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("233")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("Usman Danfodio UniversityTeaching Hosp. ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("No 1 GARBA NADAMA ROAD GOWON NAMA AREA SOKOTO STATE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("234")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SOKOTO CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("48 ABDULAHI FODIO ROAD, SOKOTO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("235")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("TARABA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ABDUL MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("5 DONGO STREET, JALINGO")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("236")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("YOBE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("BADE MEDICAL CLINIC ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("SABON GARI WARD, GASHUA, BADE")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("237")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("YOBE MEDICAL CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("13 GASHUA ROAD, DAMATURU")])]), _c("tr", [_c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("238")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("ZAMFARA ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("POLYMEDICAL AND DIAGNOSTIC CENTRE ")]), _c("td", {
+    staticStyle: {
+      "font-size": "13px",
+      padding: "4px 12px",
+      "line-height": "20px",
+      "font-family": '"Open Sans", Helvetica, Arial, sans-serif',
+      "font-weight": "400",
+      "font-style": "normal",
+      "border-color": "rgb(225, 225, 225)"
+    }
+  }, [_vm._v("MAGAMI ROAD, GUSAU")])])])]);
 }];
 render._withStripped = true;
 
@@ -5507,8 +15498,13 @@ render._withStripped = true;
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _vendor_tightenco_ziggy_dist_vue_m__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../vendor/tightenco/ziggy/dist/vue.m */ "./vendor/tightenco/ziggy/dist/vue.m.js");
+/* harmony import */ var _ziggy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ziggy */ "./resources/js/ziggy.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -5516,7 +15512,10 @@ render._withStripped = true;
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
+
+
+ // window.Vue = require("vue");
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -5524,19 +15523,23 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('cart', (__webpack_require__(/*! ./components/Cart.vue */ "./resources/js/components/Cart.vue")["default"]));
+var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
+
+files.keys().map(function (key) {
+  return vue__WEBPACK_IMPORTED_MODULE_2__["default"].component(key.split("/").pop().split(".")[0], files(key)["default"]);
+}); // Vue.component("cart", require("./components/Cart.vue").default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new Vue({
-  el: '#princeton'
-}); // app.component
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(_vendor_tightenco_ziggy_dist_vue_m__WEBPACK_IMPORTED_MODULE_0__.ZiggyVue, _ziggy__WEBPACK_IMPORTED_MODULE_1__.Ziggy);
+var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
+  el: "#princeton"
+}); // app.component("cart", require("./components/Cart.vue"));
 
 /***/ }),
 
@@ -5573,6 +15576,887 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/ziggy.js":
+/*!*******************************!*\
+  !*** ./resources/js/ziggy.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Ziggy": () => (/* binding */ Ziggy)
+/* harmony export */ });
+var Ziggy = {
+  url: "http://localhost:8888/princetonhmo/public",
+  port: 8888,
+  defaults: {},
+  routes: {
+    "debugbar.openhandler": {
+      uri: "_debugbar/open",
+      methods: ["GET", "HEAD"]
+    },
+    "debugbar.clockwork": {
+      uri: "_debugbar/clockwork/{id}",
+      methods: ["GET", "HEAD"]
+    },
+    "debugbar.assets.css": {
+      uri: "_debugbar/assets/stylesheets",
+      methods: ["GET", "HEAD"]
+    },
+    "debugbar.assets.js": {
+      uri: "_debugbar/assets/javascript",
+      methods: ["GET", "HEAD"]
+    },
+    "debugbar.cache.delete": {
+      uri: "_debugbar/cache/{key}/{tags?}",
+      methods: ["DELETE"]
+    },
+    "pages.home": {
+      uri: "/",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.board": {
+      uri: "board",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.team": {
+      uri: "team",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.individual": {
+      uri: "individual",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.corporate": {
+      uri: "corporate",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.aged": {
+      uri: "aged",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.cart": {
+      uri: "cart",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.enrollee": {
+      uri: "enrollee",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.buy": {
+      uri: "buy",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.quote": {
+      uri: "quote",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.resources": {
+      uri: "resources",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.provider": {
+      uri: "provider",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.providers": {
+      uri: "providers",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.benefits": {
+      uri: "benefits",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.contact": {
+      uri: "contact",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.faq": {
+      uri: "faq",
+      methods: ["GET", "HEAD"]
+    },
+    "pages.checkout": {
+      uri: "checkout",
+      methods: ["GET", "HEAD"]
+    },
+    dashboard: {
+      uri: "dashboard",
+      methods: ["GET", "HEAD"]
+    },
+    register: {
+      uri: "register",
+      methods: ["GET", "HEAD"]
+    },
+    login: {
+      uri: "login",
+      methods: ["GET", "HEAD"]
+    },
+    "password.request": {
+      uri: "forgot-password",
+      methods: ["GET", "HEAD"]
+    },
+    "password.email": {
+      uri: "forgot-password",
+      methods: ["POST"]
+    },
+    "password.reset": {
+      uri: "reset-password/{token}",
+      methods: ["GET", "HEAD"]
+    },
+    "password.update": {
+      uri: "reset-password",
+      methods: ["POST"]
+    },
+    "verification.notice": {
+      uri: "verify-email",
+      methods: ["GET", "HEAD"]
+    },
+    "verification.verify": {
+      uri: "verify-email/{id}/{hash}",
+      methods: ["GET", "HEAD"]
+    },
+    "verification.send": {
+      uri: "email/verification-notification",
+      methods: ["POST"]
+    },
+    "password.confirm": {
+      uri: "confirm-password",
+      methods: ["GET", "HEAD"]
+    },
+    logout: {
+      uri: "logout",
+      methods: ["POST"]
+    }
+  }
+};
+
+if (typeof window !== "undefined" && typeof window.Ziggy !== "undefined") {
+  Object.assign(Ziggy.routes, window.Ziggy.routes);
+}
+
+
+
+/***/ }),
+
+/***/ "./vendor/tightenco/ziggy/dist/vue.m.js":
+/*!**********************************************!*\
+  !*** ./vendor/tightenco/ziggy/dist/vue.m.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ZiggyVue": () => (/* binding */ I)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function t(t, r) {
+  for (var n = 0; n < r.length; n++) {
+    var e = r[n];
+    e.enumerable = e.enumerable || !1, e.configurable = !0, "value" in e && (e.writable = !0), Object.defineProperty(t, e.key, e);
+  }
+}
+
+function r(r, n, e) {
+  return n && t(r.prototype, n), e && t(r, e), Object.defineProperty(r, "prototype", {
+    writable: !1
+  }), r;
+}
+
+function n() {
+  return n = Object.assign ? Object.assign.bind() : function (t) {
+    for (var r = 1; r < arguments.length; r++) {
+      var n = arguments[r];
+
+      for (var e in n) {
+        Object.prototype.hasOwnProperty.call(n, e) && (t[e] = n[e]);
+      }
+    }
+
+    return t;
+  }, n.apply(this, arguments);
+}
+
+function e(t) {
+  return e = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) {
+    return t.__proto__ || Object.getPrototypeOf(t);
+  }, e(t);
+}
+
+function o(t, r) {
+  return o = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, r) {
+    return t.__proto__ = r, t;
+  }, o(t, r);
+}
+
+function i() {
+  if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
+  if (Reflect.construct.sham) return !1;
+  if ("function" == typeof Proxy) return !0;
+
+  try {
+    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+  } catch (t) {
+    return !1;
+  }
+}
+
+function u(t, r, n) {
+  return u = i() ? Reflect.construct.bind() : function (t, r, n) {
+    var e = [null];
+    e.push.apply(e, r);
+    var i = new (Function.bind.apply(t, e))();
+    return n && o(i, n.prototype), i;
+  }, u.apply(null, arguments);
+}
+
+function f(t) {
+  var r = "function" == typeof Map ? new Map() : void 0;
+  return f = function f(t) {
+    if (null === t || -1 === Function.toString.call(t).indexOf("[native code]")) return t;
+    if ("function" != typeof t) throw new TypeError("Super expression must either be null or a function");
+
+    if (void 0 !== r) {
+      if (r.has(t)) return r.get(t);
+      r.set(t, n);
+    }
+
+    function n() {
+      return u(t, arguments, e(this).constructor);
+    }
+
+    return n.prototype = Object.create(t.prototype, {
+      constructor: {
+        value: n,
+        enumerable: !1,
+        writable: !0,
+        configurable: !0
+      }
+    }), o(n, t);
+  }, f(t);
+}
+
+var a = String.prototype.replace,
+    c = /%20/g,
+    l = {
+  "default": "RFC3986",
+  formatters: {
+    RFC1738: function RFC1738(t) {
+      return a.call(t, c, "+");
+    },
+    RFC3986: function RFC3986(t) {
+      return String(t);
+    }
+  },
+  RFC1738: "RFC1738",
+  RFC3986: "RFC3986"
+},
+    s = Object.prototype.hasOwnProperty,
+    v = Array.isArray,
+    p = function () {
+  for (var t = [], r = 0; r < 256; ++r) {
+    t.push("%" + ((r < 16 ? "0" : "") + r.toString(16)).toUpperCase());
+  }
+
+  return t;
+}(),
+    y = function y(t, r) {
+  for (var n = r && r.plainObjects ? Object.create(null) : {}, e = 0; e < t.length; ++e) {
+    void 0 !== t[e] && (n[e] = t[e]);
+  }
+
+  return n;
+},
+    d = {
+  arrayToObject: y,
+  assign: function assign(t, r) {
+    return Object.keys(r).reduce(function (t, n) {
+      return t[n] = r[n], t;
+    }, t);
+  },
+  combine: function combine(t, r) {
+    return [].concat(t, r);
+  },
+  compact: function compact(t) {
+    for (var r = [{
+      obj: {
+        o: t
+      },
+      prop: "o"
+    }], n = [], e = 0; e < r.length; ++e) {
+      for (var o = r[e], i = o.obj[o.prop], u = Object.keys(i), f = 0; f < u.length; ++f) {
+        var a = u[f],
+            c = i[a];
+        "object" == _typeof(c) && null !== c && -1 === n.indexOf(c) && (r.push({
+          obj: i,
+          prop: a
+        }), n.push(c));
+      }
+    }
+
+    return function (t) {
+      for (; t.length > 1;) {
+        var r = t.pop(),
+            n = r.obj[r.prop];
+
+        if (v(n)) {
+          for (var e = [], o = 0; o < n.length; ++o) {
+            void 0 !== n[o] && e.push(n[o]);
+          }
+
+          r.obj[r.prop] = e;
+        }
+      }
+    }(r), t;
+  },
+  decode: function decode(t, r, n) {
+    var e = t.replace(/\+/g, " ");
+    if ("iso-8859-1" === n) return e.replace(/%[0-9a-f]{2}/gi, unescape);
+
+    try {
+      return decodeURIComponent(e);
+    } catch (t) {
+      return e;
+    }
+  },
+  encode: function encode(t, r, n, e, o) {
+    if (0 === t.length) return t;
+    var i = t;
+    if ("symbol" == _typeof(t) ? i = Symbol.prototype.toString.call(t) : "string" != typeof t && (i = String(t)), "iso-8859-1" === n) return escape(i).replace(/%u[0-9a-f]{4}/gi, function (t) {
+      return "%26%23" + parseInt(t.slice(2), 16) + "%3B";
+    });
+
+    for (var u = "", f = 0; f < i.length; ++f) {
+      var a = i.charCodeAt(f);
+      45 === a || 46 === a || 95 === a || 126 === a || a >= 48 && a <= 57 || a >= 65 && a <= 90 || a >= 97 && a <= 122 || o === l.RFC1738 && (40 === a || 41 === a) ? u += i.charAt(f) : a < 128 ? u += p[a] : a < 2048 ? u += p[192 | a >> 6] + p[128 | 63 & a] : a < 55296 || a >= 57344 ? u += p[224 | a >> 12] + p[128 | a >> 6 & 63] + p[128 | 63 & a] : (a = 65536 + ((1023 & a) << 10 | 1023 & i.charCodeAt(f += 1)), u += p[240 | a >> 18] + p[128 | a >> 12 & 63] + p[128 | a >> 6 & 63] + p[128 | 63 & a]);
+    }
+
+    return u;
+  },
+  isBuffer: function isBuffer(t) {
+    return !(!t || "object" != _typeof(t) || !(t.constructor && t.constructor.isBuffer && t.constructor.isBuffer(t)));
+  },
+  isRegExp: function isRegExp(t) {
+    return "[object RegExp]" === Object.prototype.toString.call(t);
+  },
+  maybeMap: function maybeMap(t, r) {
+    if (v(t)) {
+      for (var n = [], e = 0; e < t.length; e += 1) {
+        n.push(r(t[e]));
+      }
+
+      return n;
+    }
+
+    return r(t);
+  },
+  merge: function t(r, n, e) {
+    if (!n) return r;
+
+    if ("object" != _typeof(n)) {
+      if (v(r)) r.push(n);else {
+        if (!r || "object" != _typeof(r)) return [r, n];
+        (e && (e.plainObjects || e.allowPrototypes) || !s.call(Object.prototype, n)) && (r[n] = !0);
+      }
+      return r;
+    }
+
+    if (!r || "object" != _typeof(r)) return [r].concat(n);
+    var o = r;
+    return v(r) && !v(n) && (o = y(r, e)), v(r) && v(n) ? (n.forEach(function (n, o) {
+      if (s.call(r, o)) {
+        var i = r[o];
+        i && "object" == _typeof(i) && n && "object" == _typeof(n) ? r[o] = t(i, n, e) : r.push(n);
+      } else r[o] = n;
+    }), r) : Object.keys(n).reduce(function (r, o) {
+      var i = n[o];
+      return r[o] = s.call(r, o) ? t(r[o], i, e) : i, r;
+    }, o);
+  }
+},
+    b = Object.prototype.hasOwnProperty,
+    h = {
+  brackets: function brackets(t) {
+    return t + "[]";
+  },
+  comma: "comma",
+  indices: function indices(t, r) {
+    return t + "[" + r + "]";
+  },
+  repeat: function repeat(t) {
+    return t;
+  }
+},
+    m = Array.isArray,
+    g = String.prototype.split,
+    j = Array.prototype.push,
+    w = function w(t, r) {
+  j.apply(t, m(r) ? r : [r]);
+},
+    O = Date.prototype.toISOString,
+    E = l["default"],
+    R = {
+  addQueryPrefix: !1,
+  allowDots: !1,
+  charset: "utf-8",
+  charsetSentinel: !1,
+  delimiter: "&",
+  encode: !0,
+  encoder: d.encode,
+  encodeValuesOnly: !1,
+  format: E,
+  formatter: l.formatters[E],
+  indices: !1,
+  serializeDate: function serializeDate(t) {
+    return O.call(t);
+  },
+  skipNulls: !1,
+  strictNullHandling: !1
+},
+    S = function t(r, n, e, o, i, u, f, a, c, l, s, v, p, y) {
+  var b,
+      h = r;
+
+  if ("function" == typeof f ? h = f(n, h) : h instanceof Date ? h = l(h) : "comma" === e && m(h) && (h = d.maybeMap(h, function (t) {
+    return t instanceof Date ? l(t) : t;
+  })), null === h) {
+    if (o) return u && !p ? u(n, R.encoder, y, "key", s) : n;
+    h = "";
+  }
+
+  if ("string" == typeof (b = h) || "number" == typeof b || "boolean" == typeof b || "symbol" == _typeof(b) || "bigint" == typeof b || d.isBuffer(h)) {
+    if (u) {
+      var j = p ? n : u(n, R.encoder, y, "key", s);
+
+      if ("comma" === e && p) {
+        for (var O = g.call(String(h), ","), E = "", S = 0; S < O.length; ++S) {
+          E += (0 === S ? "" : ",") + v(u(O[S], R.encoder, y, "value", s));
+        }
+
+        return [v(j) + "=" + E];
+      }
+
+      return [v(j) + "=" + v(u(h, R.encoder, y, "value", s))];
+    }
+
+    return [v(n) + "=" + v(String(h))];
+  }
+
+  var k,
+      x = [];
+  if (void 0 === h) return x;
+  if ("comma" === e && m(h)) k = [{
+    value: h.length > 0 ? h.join(",") || null : void 0
+  }];else if (m(f)) k = f;else {
+    var C = Object.keys(h);
+    k = a ? C.sort(a) : C;
+  }
+
+  for (var N = 0; N < k.length; ++N) {
+    var T = k[N],
+        F = "object" == _typeof(T) && void 0 !== T.value ? T.value : h[T];
+
+    if (!i || null !== F) {
+      var D = m(h) ? "function" == typeof e ? e(n, T) : n : n + (c ? "." + T : "[" + T + "]");
+      w(x, t(F, D, e, o, i, u, f, a, c, l, s, v, p, y));
+    }
+  }
+
+  return x;
+},
+    k = Object.prototype.hasOwnProperty,
+    x = Array.isArray,
+    C = {
+  allowDots: !1,
+  allowPrototypes: !1,
+  arrayLimit: 20,
+  charset: "utf-8",
+  charsetSentinel: !1,
+  comma: !1,
+  decoder: d.decode,
+  delimiter: "&",
+  depth: 5,
+  ignoreQueryPrefix: !1,
+  interpretNumericEntities: !1,
+  parameterLimit: 1e3,
+  parseArrays: !0,
+  plainObjects: !1,
+  strictNullHandling: !1
+},
+    N = function N(t) {
+  return t.replace(/&#(\d+);/g, function (t, r) {
+    return String.fromCharCode(parseInt(r, 10));
+  });
+},
+    T = function T(t, r) {
+  return t && "string" == typeof t && r.comma && t.indexOf(",") > -1 ? t.split(",") : t;
+},
+    F = function F(t, r, n, e) {
+  if (t) {
+    var o = n.allowDots ? t.replace(/\.([^.[]+)/g, "[$1]") : t,
+        i = /(\[[^[\]]*])/g,
+        u = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
+        f = u ? o.slice(0, u.index) : o,
+        a = [];
+
+    if (f) {
+      if (!n.plainObjects && k.call(Object.prototype, f) && !n.allowPrototypes) return;
+      a.push(f);
+    }
+
+    for (var c = 0; n.depth > 0 && null !== (u = i.exec(o)) && c < n.depth;) {
+      if (c += 1, !n.plainObjects && k.call(Object.prototype, u[1].slice(1, -1)) && !n.allowPrototypes) return;
+      a.push(u[1]);
+    }
+
+    return u && a.push("[" + o.slice(u.index) + "]"), function (t, r, n, e) {
+      for (var o = e ? r : T(r, n), i = t.length - 1; i >= 0; --i) {
+        var u,
+            f = t[i];
+        if ("[]" === f && n.parseArrays) u = [].concat(o);else {
+          u = n.plainObjects ? Object.create(null) : {};
+          var a = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) : f,
+              c = parseInt(a, 10);
+          n.parseArrays || "" !== a ? !isNaN(c) && f !== a && String(c) === a && c >= 0 && n.parseArrays && c <= n.arrayLimit ? (u = [])[c] = o : "__proto__" !== a && (u[a] = o) : u = {
+            0: o
+          };
+        }
+        o = u;
+      }
+
+      return o;
+    }(a, r, n, e);
+  }
+},
+    D = function D(t, r) {
+  var n = function (t) {
+    if (!t) return C;
+    if (null != t.decoder && "function" != typeof t.decoder) throw new TypeError("Decoder has to be a function.");
+    if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset) throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
+    return {
+      allowDots: void 0 === t.allowDots ? C.allowDots : !!t.allowDots,
+      allowPrototypes: "boolean" == typeof t.allowPrototypes ? t.allowPrototypes : C.allowPrototypes,
+      arrayLimit: "number" == typeof t.arrayLimit ? t.arrayLimit : C.arrayLimit,
+      charset: void 0 === t.charset ? C.charset : t.charset,
+      charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : C.charsetSentinel,
+      comma: "boolean" == typeof t.comma ? t.comma : C.comma,
+      decoder: "function" == typeof t.decoder ? t.decoder : C.decoder,
+      delimiter: "string" == typeof t.delimiter || d.isRegExp(t.delimiter) ? t.delimiter : C.delimiter,
+      depth: "number" == typeof t.depth || !1 === t.depth ? +t.depth : C.depth,
+      ignoreQueryPrefix: !0 === t.ignoreQueryPrefix,
+      interpretNumericEntities: "boolean" == typeof t.interpretNumericEntities ? t.interpretNumericEntities : C.interpretNumericEntities,
+      parameterLimit: "number" == typeof t.parameterLimit ? t.parameterLimit : C.parameterLimit,
+      parseArrays: !1 !== t.parseArrays,
+      plainObjects: "boolean" == typeof t.plainObjects ? t.plainObjects : C.plainObjects,
+      strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : C.strictNullHandling
+    };
+  }(r);
+
+  if ("" === t || null == t) return n.plainObjects ? Object.create(null) : {};
+
+  for (var e = "string" == typeof t ? function (t, r) {
+    var n,
+        e = {},
+        o = (r.ignoreQueryPrefix ? t.replace(/^\?/, "") : t).split(r.delimiter, Infinity === r.parameterLimit ? void 0 : r.parameterLimit),
+        i = -1,
+        u = r.charset;
+    if (r.charsetSentinel) for (n = 0; n < o.length; ++n) {
+      0 === o[n].indexOf("utf8=") && ("utf8=%E2%9C%93" === o[n] ? u = "utf-8" : "utf8=%26%2310003%3B" === o[n] && (u = "iso-8859-1"), i = n, n = o.length);
+    }
+
+    for (n = 0; n < o.length; ++n) {
+      if (n !== i) {
+        var f,
+            a,
+            c = o[n],
+            l = c.indexOf("]="),
+            s = -1 === l ? c.indexOf("=") : l + 1;
+        -1 === s ? (f = r.decoder(c, C.decoder, u, "key"), a = r.strictNullHandling ? null : "") : (f = r.decoder(c.slice(0, s), C.decoder, u, "key"), a = d.maybeMap(T(c.slice(s + 1), r), function (t) {
+          return r.decoder(t, C.decoder, u, "value");
+        })), a && r.interpretNumericEntities && "iso-8859-1" === u && (a = N(a)), c.indexOf("[]=") > -1 && (a = x(a) ? [a] : a), e[f] = k.call(e, f) ? d.combine(e[f], a) : a;
+      }
+    }
+
+    return e;
+  }(t, n) : t, o = n.plainObjects ? Object.create(null) : {}, i = Object.keys(e), u = 0; u < i.length; ++u) {
+    var f = i[u],
+        a = F(f, e[f], n, "string" == typeof t);
+    o = d.merge(o, a, n);
+  }
+
+  return d.compact(o);
+},
+    $ = /*#__PURE__*/function () {
+  function t(t, r, n) {
+    var e, o;
+    this.name = t, this.definition = r, this.bindings = null != (e = r.bindings) ? e : {}, this.wheres = null != (o = r.wheres) ? o : {}, this.config = n;
+  }
+
+  var n = t.prototype;
+  return n.matchesUrl = function (t) {
+    var r = this;
+    if (!this.definition.methods.includes("GET")) return !1;
+    var n = this.template.replace(/(\/?){([^}?]*)(\??)}/g, function (t, n, e, o) {
+      var i,
+          u = "(?<" + e + ">" + ((null == (i = r.wheres[e]) ? void 0 : i.replace(/(^\^)|(\$$)/g, "")) || "[^/?]+") + ")";
+      return o ? "(" + n + u + ")?" : "" + n + u;
+    }).replace(/^\w+:\/\//, ""),
+        e = t.replace(/^\w+:\/\//, "").split("?"),
+        o = e[0],
+        i = e[1],
+        u = new RegExp("^" + n + "/?$").exec(o);
+    return !!u && {
+      params: u.groups,
+      query: D(i)
+    };
+  }, n.compile = function (t) {
+    var r = this,
+        n = this.parameterSegments;
+    return n.length ? this.template.replace(/{([^}?]+)(\??)}/g, function (e, o, i) {
+      var u, f, a;
+      if (!i && [null, void 0].includes(t[o])) throw new Error("Ziggy error: '" + o + "' parameter is required for route '" + r.name + "'.");
+      if (n[n.length - 1].name === o && ".*" === r.wheres[o]) return encodeURIComponent(null != (a = t[o]) ? a : "").replace(/%2F/g, "/");
+      if (r.wheres[o] && !new RegExp("^" + (i ? "(" + r.wheres[o] + ")?" : r.wheres[o]) + "$").test(null != (u = t[o]) ? u : "")) throw new Error("Ziggy error: '" + o + "' parameter does not match required format '" + r.wheres[o] + "' for route '" + r.name + "'.");
+      return encodeURIComponent(null != (f = t[o]) ? f : "");
+    }).replace(/\/+$/, "") : this.template;
+  }, r(t, [{
+    key: "template",
+    get: function get() {
+      return ((this.config.absolute ? this.definition.domain ? "" + this.config.url.match(/^\w+:\/\//)[0] + this.definition.domain + (this.config.port ? ":" + this.config.port : "") : this.config.url : "") + "/" + this.definition.uri).replace(/\/+$/, "");
+    }
+  }, {
+    key: "parameterSegments",
+    get: function get() {
+      var t, r;
+      return null != (t = null == (r = this.template.match(/{[^}?]+\??}/g)) ? void 0 : r.map(function (t) {
+        return {
+          name: t.replace(/{|\??}/g, ""),
+          required: !/\?}$/.test(t)
+        };
+      })) ? t : [];
+    }
+  }]), t;
+}(),
+    A = /*#__PURE__*/function (t) {
+  var e, i;
+
+  function u(r, e, o, i) {
+    var u;
+
+    if (void 0 === o && (o = !0), (u = t.call(this) || this).t = null != i ? i : "undefined" != typeof Ziggy ? Ziggy : null == globalThis ? void 0 : globalThis.Ziggy, u.t = n({}, u.t, {
+      absolute: o
+    }), r) {
+      if (!u.t.routes[r]) throw new Error("Ziggy error: route '" + r + "' is not in the route list.");
+      u.i = new $(r, u.t.routes[r], u.t), u.u = u.l(e);
+    }
+
+    return u;
+  }
+
+  i = t, (e = u).prototype = Object.create(i.prototype), e.prototype.constructor = e, o(e, i);
+  var f = u.prototype;
+  return f.toString = function () {
+    var t = this,
+        r = Object.keys(this.u).filter(function (r) {
+      return !t.i.parameterSegments.some(function (t) {
+        return t.name === r;
+      });
+    }).filter(function (t) {
+      return "_query" !== t;
+    }).reduce(function (r, e) {
+      var o;
+      return n({}, r, ((o = {})[e] = t.u[e], o));
+    }, {});
+    return this.i.compile(this.u) + function (t, r) {
+      var n,
+          e = t,
+          o = function (t) {
+        if (!t) return R;
+        if (null != t.encoder && "function" != typeof t.encoder) throw new TypeError("Encoder has to be a function.");
+        var r = t.charset || R.charset;
+        if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset) throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
+        var n = l["default"];
+
+        if (void 0 !== t.format) {
+          if (!b.call(l.formatters, t.format)) throw new TypeError("Unknown format option provided.");
+          n = t.format;
+        }
+
+        var e = l.formatters[n],
+            o = R.filter;
+        return ("function" == typeof t.filter || m(t.filter)) && (o = t.filter), {
+          addQueryPrefix: "boolean" == typeof t.addQueryPrefix ? t.addQueryPrefix : R.addQueryPrefix,
+          allowDots: void 0 === t.allowDots ? R.allowDots : !!t.allowDots,
+          charset: r,
+          charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : R.charsetSentinel,
+          delimiter: void 0 === t.delimiter ? R.delimiter : t.delimiter,
+          encode: "boolean" == typeof t.encode ? t.encode : R.encode,
+          encoder: "function" == typeof t.encoder ? t.encoder : R.encoder,
+          encodeValuesOnly: "boolean" == typeof t.encodeValuesOnly ? t.encodeValuesOnly : R.encodeValuesOnly,
+          filter: o,
+          format: n,
+          formatter: e,
+          serializeDate: "function" == typeof t.serializeDate ? t.serializeDate : R.serializeDate,
+          skipNulls: "boolean" == typeof t.skipNulls ? t.skipNulls : R.skipNulls,
+          sort: "function" == typeof t.sort ? t.sort : null,
+          strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : R.strictNullHandling
+        };
+      }(r);
+
+      "function" == typeof o.filter ? e = (0, o.filter)("", e) : m(o.filter) && (n = o.filter);
+      var i = [];
+      if ("object" != _typeof(e) || null === e) return "";
+      var u = h[r && r.arrayFormat in h ? r.arrayFormat : r && "indices" in r ? r.indices ? "indices" : "repeat" : "indices"];
+      n || (n = Object.keys(e)), o.sort && n.sort(o.sort);
+
+      for (var f = 0; f < n.length; ++f) {
+        var a = n[f];
+        o.skipNulls && null === e[a] || w(i, S(e[a], a, u, o.strictNullHandling, o.skipNulls, o.encode ? o.encoder : null, o.filter, o.sort, o.allowDots, o.serializeDate, o.format, o.formatter, o.encodeValuesOnly, o.charset));
+      }
+
+      var c = i.join(o.delimiter),
+          s = !0 === o.addQueryPrefix ? "?" : "";
+      return o.charsetSentinel && (s += "iso-8859-1" === o.charset ? "utf8=%26%2310003%3B&" : "utf8=%E2%9C%93&"), c.length > 0 ? s + c : "";
+    }(n({}, r, this.u._query), {
+      addQueryPrefix: !0,
+      arrayFormat: "indices",
+      encodeValuesOnly: !0,
+      skipNulls: !0,
+      encoder: function encoder(t, r) {
+        return "boolean" == typeof t ? Number(t) : r(t);
+      }
+    });
+  }, f.v = function (t) {
+    var r = this;
+    t ? this.t.absolute && t.startsWith("/") && (t = this.p().host + t) : t = this.h();
+    var e = {},
+        o = Object.entries(this.t.routes).find(function (n) {
+      return e = new $(n[0], n[1], r.t).matchesUrl(t);
+    }) || [void 0, void 0];
+    return n({
+      name: o[0]
+    }, e, {
+      route: o[1]
+    });
+  }, f.h = function () {
+    var t = this.p(),
+        r = t.pathname,
+        n = t.search;
+    return (this.t.absolute ? t.host + r : r.replace(this.t.url.replace(/^\w*:\/\/[^/]+/, ""), "").replace(/^\/+/, "/")) + n;
+  }, f.current = function (t, r) {
+    var e = this.v(),
+        o = e.name,
+        i = e.params,
+        u = e.query,
+        f = e.route;
+    if (!t) return o;
+    var a = new RegExp("^" + t.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$").test(o);
+    if ([null, void 0].includes(r) || !a) return a;
+    var c = new $(o, f, this.t);
+    r = this.l(r, c);
+    var l = n({}, i, u);
+    return !(!Object.values(r).every(function (t) {
+      return !t;
+    }) || Object.values(l).some(function (t) {
+      return void 0 !== t;
+    })) || Object.entries(r).every(function (t) {
+      return l[t[0]] == t[1];
+    });
+  }, f.p = function () {
+    var t,
+        r,
+        n,
+        e,
+        o,
+        i,
+        u = "undefined" != typeof window ? window.location : {},
+        f = u.host,
+        a = u.pathname,
+        c = u.search;
+    return {
+      host: null != (t = null == (r = this.t.location) ? void 0 : r.host) ? t : void 0 === f ? "" : f,
+      pathname: null != (n = null == (e = this.t.location) ? void 0 : e.pathname) ? n : void 0 === a ? "" : a,
+      search: null != (o = null == (i = this.t.location) ? void 0 : i.search) ? o : void 0 === c ? "" : c
+    };
+  }, f.has = function (t) {
+    return Object.keys(this.t.routes).includes(t);
+  }, f.l = function (t, r) {
+    var e = this;
+    void 0 === t && (t = {}), void 0 === r && (r = this.i), null != t || (t = {}), t = ["string", "number"].includes(_typeof(t)) ? [t] : t;
+    var o = r.parameterSegments.filter(function (t) {
+      return !e.t.defaults[t.name];
+    });
+    if (Array.isArray(t)) t = t.reduce(function (t, r, e) {
+      var i, u;
+      return n({}, t, o[e] ? ((i = {})[o[e].name] = r, i) : "object" == _typeof(r) ? r : ((u = {})[r] = "", u));
+    }, {});else if (1 === o.length && !t[o[0].name] && (t.hasOwnProperty(Object.values(r.bindings)[0]) || t.hasOwnProperty("id"))) {
+      var i;
+      (i = {})[o[0].name] = t, t = i;
+    }
+    return n({}, this.m(r), this.g(t, r));
+  }, f.m = function (t) {
+    var r = this;
+    return t.parameterSegments.filter(function (t) {
+      return r.t.defaults[t.name];
+    }).reduce(function (t, e, o) {
+      var i,
+          u = e.name;
+      return n({}, t, ((i = {})[u] = r.t.defaults[u], i));
+    }, {});
+  }, f.g = function (t, r) {
+    var e = r.bindings,
+        o = r.parameterSegments;
+    return Object.entries(t).reduce(function (t, r) {
+      var i,
+          u,
+          f = r[0],
+          a = r[1];
+      if (!a || "object" != _typeof(a) || Array.isArray(a) || !o.some(function (t) {
+        return t.name === f;
+      })) return n({}, t, ((u = {})[f] = a, u));
+
+      if (!a.hasOwnProperty(e[f])) {
+        if (!a.hasOwnProperty("id")) throw new Error("Ziggy error: object passed as '" + f + "' parameter is missing route model binding key '" + e[f] + "'.");
+        e[f] = "id";
+      }
+
+      return n({}, t, ((i = {})[f] = a[e[f]], i));
+    }, {});
+  }, f.valueOf = function () {
+    return this.toString();
+  }, f.check = function (t) {
+    return this.has(t);
+  }, r(u, [{
+    key: "params",
+    get: function get() {
+      var t = this.v();
+      return n({}, t.params, t.query);
+    }
+  }]), u;
+}( /*#__PURE__*/f(String)),
+    I = {
+  install: function install(t, r) {
+    var n = function n(t, _n, e, o) {
+      return void 0 === o && (o = r), function (t, r, n, e) {
+        var o = new A(t, r, n, e);
+        return t ? o.toString() : o;
+      }(t, _n, e, o);
+    };
+
+    t.mixin({
+      methods: {
+        route: n
+      }
+    }), parseInt(t.version) > 2 && t.provide("route", n);
+  }
+};
+
+
 
 /***/ }),
 
@@ -28020,10 +38904,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28227,6 +39111,45 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/js/components/Cards.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Cards.vue ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Cards_vue_vue_type_template_id_767212f0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cards.vue?vue&type=template&id=767212f0& */ "./resources/js/components/Cards.vue?vue&type=template&id=767212f0&");
+/* harmony import */ var _Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cards.vue?vue&type=script&lang=js& */ "./resources/js/components/Cards.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Cards_vue_vue_type_template_id_767212f0___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Cards_vue_vue_type_template_id_767212f0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Cards.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Cart.vue":
 /*!******************************************!*\
   !*** ./resources/js/components/Cart.vue ***!
@@ -28266,6 +39189,61 @@ component.options.__file = "resources/js/components/Cart.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/Providers.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/Providers.vue ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Providers_vue_vue_type_template_id_290e41c7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Providers.vue?vue&type=template&id=290e41c7& */ "./resources/js/components/Providers.vue?vue&type=template&id=290e41c7&");
+/* harmony import */ var _Providers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Providers.vue?vue&type=script&lang=js& */ "./resources/js/components/Providers.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Providers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Providers_vue_vue_type_template_id_290e41c7___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Providers_vue_vue_type_template_id_290e41c7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Providers.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Cards.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Cards.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Cards.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cards.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Cart.vue?vue&type=script&lang=js&":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/Cart.vue?vue&type=script&lang=js& ***!
@@ -28282,6 +39260,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Providers.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/Providers.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Providers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Providers.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Providers.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Providers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Cards.vue?vue&type=template&id=767212f0&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Cards.vue?vue&type=template&id=767212f0& ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_767212f0___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_767212f0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_767212f0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Cards.vue?vue&type=template&id=767212f0& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cards.vue?vue&type=template&id=767212f0&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Cart.vue?vue&type=template&id=b7f93bea&":
 /*!*************************************************************************!*\
   !*** ./resources/js/components/Cart.vue?vue&type=template&id=b7f93bea& ***!
@@ -28295,6 +39306,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_b7f93bea___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_b7f93bea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Cart.vue?vue&type=template&id=b7f93bea& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cart.vue?vue&type=template&id=b7f93bea&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Providers.vue?vue&type=template&id=290e41c7&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Providers.vue?vue&type=template&id=290e41c7& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Providers_vue_vue_type_template_id_290e41c7___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Providers_vue_vue_type_template_id_290e41c7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Providers_vue_vue_type_template_id_290e41c7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Providers.vue?vue&type=template&id=290e41c7& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Providers.vue?vue&type=template&id=290e41c7&");
 
 
 /***/ }),
@@ -28469,6 +39497,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "useAttrs": () => (/* binding */ useAttrs),
 /* harmony export */   "useCssModule": () => (/* binding */ useCssModule),
 /* harmony export */   "useCssVars": () => (/* binding */ useCssVars),
+/* harmony export */   "useListeners": () => (/* binding */ useListeners),
 /* harmony export */   "useSlots": () => (/* binding */ useSlots),
 /* harmony export */   "version": () => (/* binding */ version),
 /* harmony export */   "watch": () => (/* binding */ watch),
@@ -28477,7 +39506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "watchSyncEffect": () => (/* binding */ watchSyncEffect)
 /* harmony export */ });
 /*!
- * Vue.js v2.7.7
+ * Vue.js v2.7.14
  * (c) 2014-2022 Evan You
  * Released under the MIT License.
  */
@@ -28589,7 +39618,13 @@ var isReservedAttribute = makeMap('key,ref,slot,slot-scope,is');
  * Remove an item from an array.
  */
 function remove$2(arr, item) {
-    if (arr.length) {
+    var len = arr.length;
+    if (len) {
+        // fast path for the only / last item
+        if (item === arr[len - 1]) {
+            arr.length = len - 1;
+            return;
+        }
         var index = arr.indexOf(item);
         if (index > -1) {
             return arr.splice(index, 1);
@@ -29127,13 +40162,13 @@ if (true) {
             'referenced during render. Make sure that this property is reactive, ' +
             'either in the data option, or for class-based components, by ' +
             'initializing the property. ' +
-            'See: https://vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.', target);
+            'See: https://v2.vuejs.org/v2/guide/reactivity.html#Declaring-Reactive-Properties.', target);
     };
     var warnReservedPrefix_1 = function (target, key) {
         warn$2("Property \"".concat(key, "\" must be accessed with \"$data.").concat(key, "\" because ") +
             'properties starting with "$" or "_" are not proxied in the Vue instance to ' +
             'prevent conflicts with Vue internals. ' +
-            'See: https://vuejs.org/v2/api/#data', target);
+            'See: https://v2.vuejs.org/v2/api/#data', target);
     };
     var hasProxy_1 = typeof Proxy !== 'undefined' && isNative(Proxy);
     if (hasProxy_1) {
@@ -29218,6 +40253,15 @@ var __assign = function() {
 };
 
 var uid$2 = 0;
+var pendingCleanupDeps = [];
+var cleanupDeps = function () {
+    for (var i = 0; i < pendingCleanupDeps.length; i++) {
+        var dep = pendingCleanupDeps[i];
+        dep.subs = dep.subs.filter(function (s) { return s; });
+        dep._pending = false;
+    }
+    pendingCleanupDeps.length = 0;
+};
 /**
  * A dep is an observable that can have multiple
  * directives subscribing to it.
@@ -29225,6 +40269,8 @@ var uid$2 = 0;
  */
 var Dep = /** @class */ (function () {
     function Dep() {
+        // pending subs cleanup
+        this._pending = false;
         this.id = uid$2++;
         this.subs = [];
     }
@@ -29232,7 +40278,15 @@ var Dep = /** @class */ (function () {
         this.subs.push(sub);
     };
     Dep.prototype.removeSub = function (sub) {
-        remove$2(this.subs, sub);
+        // #12696 deps with massive amount of subscribers are extremely slow to
+        // clean up in Chromium
+        // to workaround this, we unset the sub for now, and clear them on
+        // next scheduler flush.
+        this.subs[this.subs.indexOf(sub)] = null;
+        if (!this._pending) {
+            this._pending = true;
+            pendingCleanupDeps.push(this);
+        }
     };
     Dep.prototype.depend = function (info) {
         if (Dep.target) {
@@ -29244,7 +40298,7 @@ var Dep = /** @class */ (function () {
     };
     Dep.prototype.notify = function (info) {
         // stabilize the subscriber list first
-        var subs = this.subs.slice();
+        var subs = this.subs.filter(function (s) { return s; });
         if ( true && !config.async) {
             // subs aren't sorted in scheduler if not running async
             // we need to sort them now to make sure they fire in correct
@@ -29252,12 +40306,12 @@ var Dep = /** @class */ (function () {
             subs.sort(function (a, b) { return a.id - b.id; });
         }
         for (var i = 0, l = subs.length; i < l; i++) {
+            var sub = subs[i];
             if ( true && info) {
-                var sub = subs[i];
                 sub.onTrigger &&
                     sub.onTrigger(__assign({ effect: subs[i] }, info));
             }
-            subs[i].update();
+            sub.update();
         }
     };
     return Dep;
@@ -29410,21 +40464,18 @@ var Observer = /** @class */ (function () {
  * or the existing observer if the value already has one.
  */
 function observe(value, shallow, ssrMockReactivity) {
-    if (!isObject(value) || isRef(value) || value instanceof VNode) {
-        return;
+    if (value && hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
+        return value.__ob__;
     }
-    var ob;
-    if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
-        ob = value.__ob__;
-    }
-    else if (shouldObserve &&
+    if (shouldObserve &&
         (ssrMockReactivity || !isServerRendering()) &&
         (isArray(value) || isPlainObject(value)) &&
         Object.isExtensible(value) &&
-        !value.__v_skip /* ReactiveFlags.SKIP */) {
-        ob = new Observer(value, shallow, ssrMockReactivity);
+        !value.__v_skip /* ReactiveFlags.SKIP */ &&
+        !isRef(value) &&
+        !(value instanceof VNode)) {
+        return new Observer(value, shallow, ssrMockReactivity);
     }
-    return ob;
 }
 /**
  * Define a reactive property on an Object.
@@ -29481,7 +40532,7 @@ function defineReactive(obj, key, val, customSetter, shallow, mock) {
                 // #7981: for accessor properties without setter
                 return;
             }
-            else if (isRef(value) && !isRef(newVal)) {
+            else if (!shallow && isRef(value) && !isRef(newVal)) {
                 value.value = newVal;
                 return;
             }
@@ -29657,7 +40708,10 @@ function toRaw(observed) {
     return raw ? toRaw(raw) : observed;
 }
 function markRaw(value) {
-    def(value, "__v_skip" /* ReactiveFlags.SKIP */, true);
+    // non-extensible objects won't be observed anyway
+    if (Object.isExtensible(value)) {
+        def(value, "__v_skip" /* ReactiveFlags.SKIP */, true);
+    }
     return value;
 }
 /**
@@ -29825,6 +40879,9 @@ function createReadonly(target, shallow) {
             }
         }
         return target;
+    }
+    if ( true && !Object.isExtensible(target)) {
+        warn$2("Vue 2 does not support creating readonly proxy for non-extensible object.");
     }
     // already a readonly object
     if (isReadonly(target)) {
@@ -30772,7 +41829,19 @@ function createSetupContext(vm) {
     var exposeCalled = false;
     return {
         get attrs() {
-            return initAttrsProxy(vm);
+            if (!vm._attrsProxy) {
+                var proxy = (vm._attrsProxy = {});
+                def(proxy, '_v_attr_proxy', true);
+                syncSetupProxy(proxy, vm.$attrs, emptyObject, vm, '$attrs');
+            }
+            return vm._attrsProxy;
+        },
+        get listeners() {
+            if (!vm._listenersProxy) {
+                var proxy = (vm._listenersProxy = {});
+                syncSetupProxy(proxy, vm.$listeners, emptyObject, vm, '$listeners');
+            }
+            return vm._listenersProxy;
         },
         get slots() {
             return initSlotsProxy(vm);
@@ -30793,20 +41862,12 @@ function createSetupContext(vm) {
         }
     };
 }
-function initAttrsProxy(vm) {
-    if (!vm._attrsProxy) {
-        var proxy = (vm._attrsProxy = {});
-        def(proxy, '_v_attr_proxy', true);
-        syncSetupAttrs(proxy, vm.$attrs, emptyObject, vm);
-    }
-    return vm._attrsProxy;
-}
-function syncSetupAttrs(to, from, prev, instance) {
+function syncSetupProxy(to, from, prev, instance, type) {
     var changed = false;
     for (var key in from) {
         if (!(key in to)) {
             changed = true;
-            defineProxyAttr(to, key, instance);
+            defineProxyAttr(to, key, instance, type);
         }
         else if (from[key] !== prev[key]) {
             changed = true;
@@ -30820,12 +41881,12 @@ function syncSetupAttrs(to, from, prev, instance) {
     }
     return changed;
 }
-function defineProxyAttr(proxy, key, instance) {
+function defineProxyAttr(proxy, key, instance, type) {
     Object.defineProperty(proxy, key, {
         enumerable: true,
         configurable: true,
         get: function () {
-            return instance.$attrs[key];
+            return instance[type][key];
         }
     });
 }
@@ -30846,16 +41907,26 @@ function syncSetupSlots(to, from) {
     }
 }
 /**
- * @internal use manual type def
+ * @internal use manual type def because public setup context type relies on
+ * legacy VNode types
  */
 function useSlots() {
     return getContext().slots;
 }
 /**
- * @internal use manual type def
+ * @internal use manual type def because public setup context type relies on
+ * legacy VNode types
  */
 function useAttrs() {
     return getContext().attrs;
+}
+/**
+ * Vue 2 only
+ * @internal use manual type def because public setup context type relies on
+ * legacy VNode types
+ */
+function useListeners() {
+    return getContext().listeners;
 }
 function getContext() {
     if ( true && !currentInstance) {
@@ -31299,8 +42370,13 @@ function lifecycleMixin(Vue) {
             vm.$el.__vue__ = vm;
         }
         // if parent is an HOC, update its $el as well
-        if (vm.$vnode && vm.$parent && vm.$vnode === vm.$parent._vnode) {
-            vm.$parent.$el = vm.$el;
+        var wrapper = vm;
+        while (wrapper &&
+            wrapper.$vnode &&
+            wrapper.$parent &&
+            wrapper.$vnode === wrapper.$parent._vnode) {
+            wrapper.$parent.$el = wrapper.$el;
+            wrapper = wrapper.$parent;
         }
         // updated hook is called by the scheduler to ensure that children are
         // updated in a parent's updated hook.
@@ -31459,12 +42535,19 @@ function updateChildComponent(vm, propsData, listeners, parentVnode, renderChild
     if (vm._attrsProxy) {
         // force update if attrs are accessed and has changed since it may be
         // passed to a child component.
-        if (syncSetupAttrs(vm._attrsProxy, attrs, (prevVNode.data && prevVNode.data.attrs) || emptyObject, vm)) {
+        if (syncSetupProxy(vm._attrsProxy, attrs, (prevVNode.data && prevVNode.data.attrs) || emptyObject, vm, '$attrs')) {
             needsForceUpdate = true;
         }
     }
     vm.$attrs = attrs;
-    vm.$listeners = listeners || emptyObject;
+    // update listeners
+    listeners = listeners || emptyObject;
+    var prevListeners = vm.$options._parentListeners;
+    if (vm._listenersProxy) {
+        syncSetupProxy(vm._listenersProxy, listeners, prevListeners || emptyObject, vm, '$listeners');
+    }
+    vm.$listeners = vm.$options._parentListeners = listeners;
+    updateComponentListeners(vm, listeners, prevListeners);
     // update props
     if (propsData && vm.$options.props) {
         toggleObserving(false);
@@ -31479,11 +42562,6 @@ function updateChildComponent(vm, propsData, listeners, parentVnode, renderChild
         // keep a copy of raw propsData
         vm.$options.propsData = propsData;
     }
-    // update listeners
-    listeners = listeners || emptyObject;
-    var oldListeners = vm.$options._parentListeners;
-    vm.$options._parentListeners = listeners;
-    updateComponentListeners(vm, listeners, oldListeners);
     // resolve slots + force update if has children
     if (needsForceUpdate) {
         vm.$slots = resolveSlots(renderChildren, parentVnode.context);
@@ -31653,6 +42731,7 @@ function flushSchedulerQueue() {
     // call component updated and activated hooks
     callActivatedHooks(activatedQueue);
     callUpdatedHooks(updatedQueue);
+    cleanupDeps();
     // devtool hook
     /* istanbul ignore if */
     if (devtools && config.devtools) {
@@ -31860,8 +42939,7 @@ function doWatch(source, cb, _a) {
     var oldValue = isMultiSource ? [] : INITIAL_WATCHER_VALUE;
     // overwrite default run
     watcher.run = function () {
-        if (!watcher.active &&
-            !(flush === 'pre' && instance && instance._isBeingDestroyed)) {
+        if (!watcher.active) {
             return;
         }
         if (cb) {
@@ -31941,6 +43019,7 @@ var activeEffectScope;
 var EffectScope = /** @class */ (function () {
     function EffectScope(detached) {
         if (detached === void 0) { detached = false; }
+        this.detached = detached;
         /**
          * @internal
          */
@@ -31953,8 +43032,8 @@ var EffectScope = /** @class */ (function () {
          * @internal
          */
         this.cleanups = [];
+        this.parent = activeEffectScope;
         if (!detached && activeEffectScope) {
-            this.parent = activeEffectScope;
             this.index =
                 (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(this) - 1;
         }
@@ -32003,7 +43082,7 @@ var EffectScope = /** @class */ (function () {
                 }
             }
             // nested scope, dereference from parent to avoid memory leaks
-            if (this.parent && !fromParent) {
+            if (!this.detached && this.parent && !fromParent) {
                 // optimized O(1) removal
                 var last = this.parent.scopes.pop();
                 if (last && last !== this) {
@@ -32011,6 +43090,7 @@ var EffectScope = /** @class */ (function () {
                     last.index = this.index;
                 }
             }
+            this.parent = undefined;
             this.active = false;
         }
     };
@@ -32435,17 +43515,21 @@ var onBeforeUpdate = createLifeCycle('beforeUpdate');
 var onUpdated = createLifeCycle('updated');
 var onBeforeUnmount = createLifeCycle('beforeDestroy');
 var onUnmounted = createLifeCycle('destroyed');
-var onErrorCaptured = createLifeCycle('errorCaptured');
 var onActivated = createLifeCycle('activated');
 var onDeactivated = createLifeCycle('deactivated');
 var onServerPrefetch = createLifeCycle('serverPrefetch');
 var onRenderTracked = createLifeCycle('renderTracked');
 var onRenderTriggered = createLifeCycle('renderTriggered');
+var injectErrorCapturedHook = createLifeCycle('errorCaptured');
+function onErrorCaptured(hook, target) {
+    if (target === void 0) { target = currentInstance; }
+    injectErrorCapturedHook(hook, target);
+}
 
 /**
  * Note: also update dist/vue.runtime.mjs when adding new exports to this file.
  */
-var version = '2.7.7';
+var version = '2.7.14';
 /**
  * @internal type is manually declared in <root>/types/v3-define-component.d.ts
  */
@@ -32468,6 +43552,7 @@ function _traverse(val, seen) {
     var i, keys;
     var isA = isArray(val);
     if ((!isA && !isObject(val)) ||
+        val.__v_skip /* ReactiveFlags.SKIP */ ||
         Object.isFrozen(val) ||
         val instanceof VNode) {
         return;
@@ -32504,11 +43589,16 @@ var uid$1 = 0;
  */
 var Watcher = /** @class */ (function () {
     function Watcher(vm, expOrFn, cb, options, isRenderWatcher) {
-        recordEffectScope(this, activeEffectScope || (vm ? vm._scope : undefined));
-        if ((this.vm = vm)) {
-            if (isRenderWatcher) {
-                vm._watcher = this;
-            }
+        recordEffectScope(this, 
+        // if the active effect scope is manually created (not a component scope),
+        // prioritize it
+        activeEffectScope && !activeEffectScope._vm
+            ? activeEffectScope
+            : vm
+                ? vm._scope
+                : undefined);
+        if ((this.vm = vm) && isRenderWatcher) {
+            vm._watcher = this;
         }
         // options
         if (options) {
@@ -32779,7 +43869,7 @@ function initData(vm) {
         data = {};
          true &&
             warn$2('data functions should return an object:\n' +
-                'https://vuejs.org/v2/guide/components.html#data-Must-Be-a-Function', vm);
+                'https://v2.vuejs.org/v2/guide/components.html#data-Must-Be-a-Function', vm);
     }
     // proxy data on instance
     var keys = Object.keys(data);
@@ -33077,6 +44167,7 @@ function initMixin$1(Vue) {
         vm.__v_skip = true;
         // effect scope
         vm._scope = new EffectScope(true /* detached */);
+        vm._scope._vm = true;
         // merge options
         if (options && options._isComponent) {
             // optimize internal component instantiation
@@ -33586,7 +44677,8 @@ if (true) {
 /**
  * Helper that recursively merges two data objects together.
  */
-function mergeData(to, from) {
+function mergeData(to, from, recursive) {
+    if (recursive === void 0) { recursive = true; }
     if (!from)
         return to;
     var key, toVal, fromVal;
@@ -33600,7 +44692,7 @@ function mergeData(to, from) {
             continue;
         toVal = to[key];
         fromVal = from[key];
-        if (!hasOwn(to, key)) {
+        if (!recursive || !hasOwn(to, key)) {
             set(to, key, fromVal);
         }
         else if (toVal !== fromVal &&
@@ -33761,7 +44853,19 @@ strats.props =
                         extend(ret, childVal);
                     return ret;
                 };
-strats.provide = mergeDataOrFn;
+strats.provide = function (parentVal, childVal) {
+    if (!parentVal)
+        return childVal;
+    return function () {
+        var ret = Object.create(null);
+        mergeData(ret, isFunction(parentVal) ? parentVal.call(this) : parentVal);
+        if (childVal) {
+            mergeData(ret, isFunction(childVal) ? childVal.call(this) : childVal, false // non-recursive
+            );
+        }
+        return ret;
+    };
+};
 /**
  * Default strategy.
  */
@@ -35630,7 +46734,16 @@ function normalizeDirectives(dirs, vm) {
         }
         res[getRawDirName(dir)] = dir;
         if (vm._setupState && vm._setupState.__sfc) {
-            dir.def = dir.def || resolveAsset(vm, '_setupState', 'v-' + dir.name);
+            var setupDef = dir.def || resolveAsset(vm, '_setupState', 'v-' + dir.name);
+            if (typeof setupDef === 'function') {
+                dir.def = {
+                    bind: setupDef,
+                    update: setupDef,
+                };
+            }
+            else {
+                dir.def = setupDef;
+            }
         }
         dir.def = dir.def || resolveAsset(vm.$options, 'directives', dir.name, true);
     }
@@ -39394,10 +50507,7 @@ function genElement(el, state) {
             // check if this is a component in <script setup>
             var bindings = state.options.bindings;
             if (maybeComponent && bindings && bindings.__isScriptSetup !== false) {
-                tag =
-                    checkBindingType(bindings, el.tag) ||
-                        checkBindingType(bindings, camelize(el.tag)) ||
-                        checkBindingType(bindings, capitalize(camelize(el.tag)));
+                tag = checkBindingType(bindings, el.tag);
             }
             if (!tag)
                 tag = "'".concat(el.tag, "'");
@@ -39414,9 +50524,29 @@ function genElement(el, state) {
     }
 }
 function checkBindingType(bindings, key) {
-    var type = bindings[key];
-    if (type && type.startsWith('setup')) {
-        return key;
+    var camelName = camelize(key);
+    var PascalName = capitalize(camelName);
+    var checkType = function (type) {
+        if (bindings[key] === type) {
+            return key;
+        }
+        if (bindings[camelName] === type) {
+            return camelName;
+        }
+        if (bindings[PascalName] === type) {
+            return PascalName;
+        }
+    };
+    var fromConst = checkType("setup-const" /* BindingTypes.SETUP_CONST */) ||
+        checkType("setup-reactive-const" /* BindingTypes.SETUP_REACTIVE_CONST */);
+    if (fromConst) {
+        return fromConst;
+    }
+    var fromMaybeRef = checkType("setup-let" /* BindingTypes.SETUP_LET */) ||
+        checkType("setup-ref" /* BindingTypes.SETUP_REF */) ||
+        checkType("setup-maybe-ref" /* BindingTypes.SETUP_MAYBE_REF */);
+    if (fromMaybeRef) {
+        return fromMaybeRef;
     }
 }
 // hoist static sub-trees out
@@ -39496,7 +50626,7 @@ function genFor(el, state, altGen, altHelper) {
         !el.key) {
         state.warn("<".concat(el.tag, " v-for=\"").concat(alias, " in ").concat(exp, "\">: component lists rendered with ") +
             "v-for should have explicit keys. " +
-            "See https://vuejs.org/guide/list.html#key for more info.", el.rawAttrsMap['v-for'], true /* tip */);
+            "See https://v2.vuejs.org/v2/guide/list.html#key for more info.", el.rawAttrsMap['v-for'], true /* tip */);
     }
     el.forProcessed = true; // avoid recursion
     return ("".concat(altHelper || '_l', "((").concat(exp, "),") +
@@ -40248,6 +51378,40 @@ Vue.compile = compileToFunctions;
 
 /***/ }),
 
+/***/ "./resources/js sync recursive \\.vue$/":
+/*!************************************!*\
+  !*** ./resources/js/ sync \.vue$/ ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./components/Cards.vue": "./resources/js/components/Cards.vue",
+	"./components/Cart.vue": "./resources/js/components/Cart.vue",
+	"./components/Providers.vue": "./resources/js/components/Providers.vue"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./resources/js sync recursive \\.vue$/";
+
+/***/ }),
+
 /***/ "./node_modules/axios/package.json":
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
@@ -40433,7 +51597,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
