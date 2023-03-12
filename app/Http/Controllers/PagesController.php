@@ -45,23 +45,42 @@ class PagesController extends Controller
     {
         return view('front.buy');
     }
+
     public function quote()
     {
         return view('front.quote');
     }
+
     public function cart(Request $request)
     {
         $plan = $request->input('plan');
         $type = $request->input('type');
 
-        $hPlan = Plan::where('name', $plan)->where('type', $type)->firstOrFail();
-        $items =  [$hPlan];
-        return view('front.cart', compact("items"));
+        $hPlan = Plan::where('name', $plan)->where('type', $type)->first();
+        if ($hPlan != null) {
+            $items =  [$hPlan];
+            return view('front.cart', compact("items"));
+        }
+
+        return redirect()->route('pages.individual');
     }
 
-    public function checkout()
+    public function cartCollector(Request $request)
     {
-        return view('front.checkout');
+        $input = $request->only(['items', 'total']);
+
+        $request->session()->put('cart', $input);
+        return redirect()->route('pages.checkout');
+    }
+
+    public function checkout(Request $request)
+    {
+        if (!$request->session()->has('cart')) {
+            return redirect()->route('pages.individual');
+        }
+        $cart = $request->session()->get('cart');
+
+        return view('front.checkout', compact('cart'));
     }
 
     public function resources()

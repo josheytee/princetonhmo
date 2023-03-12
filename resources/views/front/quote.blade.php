@@ -2,8 +2,7 @@
 
 @section('content')
     <!-- breadcrumb area start -->
-    <section class="breadcrumb-area bg_img pb-160" data-overlay="8"
-        data-background="https://princetonhmo.net/wp-content/uploads/2019/08/logo_princeon.png">
+    <section class="breadcrumb-area bg_img pb-160" data-overlay="8" data-background="assets/images/uploads/quote.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -14,7 +13,7 @@
                             <li>|</li>
                             <li>Quote</li>
                         </ul>
-                        <h1 class="back-title">Contact</h1>
+                        <h1 class="back-title">Quote</h1>
                     </div>
                 </div>
             </div>

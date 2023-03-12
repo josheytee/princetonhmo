@@ -8,6 +8,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @stack('meta')
+
 
     <!--====== Title ======-->
     <title>Princeton HMO – Princeton Health Care Limited</title>
@@ -117,27 +119,28 @@
                                         </ul> -->
                                     </li>
                                     <li>
-                                        <a href="{{ route('pages.board') }}">About Us</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="{{ route('pages.board') }}">The Board</a></li>
-                                            <li><a href="{{ route('pages.team') }}"">Management Team</a></li>
-                                            <li><a href="{{ route('pages.faq') }}">FAQs</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="{{ route('pages.individual') }}">Our Plans</a>
+                                        <a href="{{ route('pages.individual') }}">Our Plans</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('pages.individual') }}">Individual</a></li>
                                             <li><a href="{{ route('pages.corporate') }}"">Corporate</a></li>
                                             <li><a href="{{ route('pages.aged') }}">Aged</a></li>
                                         </ul>
                                     </li>
+
                                     <li>
                                         <a href="{{ route('pages.resources') }}">Resources</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('pages.provider') }}">Be a provider</a></li>
                                             <li><a href="{{ route('pages.providers') }}">Providers List</a></li>
                                             <li><a href="{{ route('pages.benefits') }}">Your Benefit List</a></li>
-
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('pages.board') }}">About Us</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{{ route('pages.board') }}">The Board</a></li>
+                                            <li><a href="{{ route('pages.team') }}"">Management Team</a></li>
+                                            <li><a href="{{ route('pages.faq') }}">FAQs</a></li>
                                         </ul>
                                     </li>
                                     {{-- <li><a href="{{ route('pages.providers') }}">Providers</a></li> --}}

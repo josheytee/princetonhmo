@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,8 @@ Route::get('/benefits', [PagesController::class, 'benefits'])->name('pages.benef
 Route::get('/contact', [PagesController::class, 'contact'])->name('pages.contact');
 Route::get('/faq', [PagesController::class, 'faq'])->name('pages.faq');
 Route::get('/checkout', [PagesController::class, 'checkout'])->name('pages.checkout');
+Route::post('/checkout', [PagesController::class, 'cartCollector'])->name('pages.collector');
+Route::post('/callback', [PaymentController::class, 'FlwCallbackVerifier'])->name('payment.flw.verify');
 
 
 Route::get('/dashboard', function () {

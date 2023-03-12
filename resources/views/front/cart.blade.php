@@ -22,6 +22,6 @@
     <!-- breadcrumb area end -->
     <cart :items={{ json_encode($items) }}></cart>
 @endsection
-@push('scripts')
-    <script src="https://checkout.flutterwave.com/v3.js"></script>
+@push('meta')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 @endpush
