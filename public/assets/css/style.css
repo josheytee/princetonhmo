@@ -299,11 +299,13 @@ img {
     font-weight: 700;
     color: #d8352a;
     font-size: 14px;
+    line-height: 20px;
 }
 
 .header-top-info .content a {
     color: #003242;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 20px;
 }
 
 /* header-2 css */
@@ -2601,7 +2603,7 @@ img {
 }
 
 .service-area .section-heading .section-title {
-    color: var(--light-text-color);
+    color: var(--dark-text-color);
     display: block;
 }
 

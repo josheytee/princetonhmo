@@ -157,7 +157,8 @@
                             </div>
                             <div class="content">
                                 <p>Get Support</p>
-                                <a href="tel:987876875865">+987 (876) 875 86 5</a>
+                                <a href="tel:987876875865">0815 120 5555</a>,<br>
+                                <a href="tel:987876875865">0818 595 5555</a>
                             </div>
                         </div>
                     </div>

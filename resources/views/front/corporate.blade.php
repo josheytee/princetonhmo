@@ -38,7 +38,6 @@
                                 <div class="section-heading">
 
                                     <h4 class="sub-title">Get A Quote</h4>
-
                                     <h2 class="section-title">Get a Qoute<br> Right Now<span>.</span></h2>
 
                                 </div>
@@ -81,7 +80,8 @@
                     <div class="section-heading mb-70">
 
                         <h4 class="sub-title">Services</h4>
-                        <h2 class="section-title">Our Coorporate Plan is not limited to<span>.</span></h2>
+                        <h2 class="section-title" style="color: white;">Our Coorporate Plan is not limited to<span>.</span>
+                        </h2>
 
                     </div>
 

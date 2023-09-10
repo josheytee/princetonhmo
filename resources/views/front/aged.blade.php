@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- breadcrumb area start -->
-    <section class="breadcrumb-area bg_img pb-160" data-overlay="8" data-background="assets/images/uploads/banner.jpg">
+    <section class="breadcrumb-area bg_img pb-160" data-overlay="8" data-background="assets/images/uploads/old.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -29,9 +29,9 @@
                     <div class="about-thumb-wrap about-thumb-wrap-3 mt-60">
                         <div class="about-thumb-big">
                             <div class="about-thumb-small">
-                                <img src="assets/images/about/04.jpeg" alt="">
+                                <img src="assets/images/uploads/old_woman.jpg" alt="" style="width: 200px;">
                             </div>
-                            <img src="assets/images/uploads/family.png" alt="">
+                            <img src="assets/images/uploads/old_fam.jpg" alt="">
                             <span class="shape">
                                 <img src="assets/images/about/shape.png" alt="">
                             </span>
@@ -126,57 +126,57 @@
 
     <!-- counter area start -->
     <!-- <section class="counter-area pt-100 pb-100">
-                                                                                                                <div class="container">
-                                                                                                                    <div class="row">
-                                                                                                                        <div class="col-lg-12">
-                                                                                                                            <div class="counter-area-wrap">
-                                                                                                                                <div class="counter-wrap">
-                                                                                                                                    <div class="single-counter-box pb-50">
-                                                                                                                                        <div class="icon">
-                                                                                                                                            <img src="assets/images/icons/experience-icon-01.png" alt="">
-                                                                                                                                        </div>
-                                                                                                                                        <div class="content">
-                                                                                                                                            <h2 class="title"><span class="counter">51</span>%</h2>
-                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-                                                                                                                                            </p>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                    <div class="single-counter-box pb-50">
-                                                                                                                                        <div class="icon">
-                                                                                                                                            <img src="assets/images/icons/experience-icon-01.png" alt="">
-                                                                                                                                        </div>
-                                                                                                                                        <div class="content">
-                                                                                                                                            <h2 class="title"><span class="counter">51</span>%</h2>
-                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-                                                                                                                                            </p>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                    <div class="single-counter-box pt-60">
-                                                                                                                                        <div class="icon">
-                                                                                                                                            <img src="assets/images/icons/experience-icon-03.png" alt="">
-                                                                                                                                        </div>
-                                                                                                                                        <div class="content">
-                                                                                                                                            <h2 class="title"><span class="counter">100</span>%</h2>
-                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-                                                                                                                                            </p>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                    <div class="single-counter-box pt-60">
-                                                                                                                                        <div class="icon">
-                                                                                                                                            <img src="assets/images/icons/experience-icon-04.png" alt="">
-                                                                                                                                        </div>
-                                                                                                                                        <div class="content">
-                                                                                                                                            <h2 class="title"><span class="counter">10</span>%</h2>
-                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-                                                                                                                                            </p>
+                                                                                                                                <div class="container">
+                                                                                                                                    <div class="row">
+                                                                                                                                        <div class="col-lg-12">
+                                                                                                                                            <div class="counter-area-wrap">
+                                                                                                                                                <div class="counter-wrap">
+                                                                                                                                                    <div class="single-counter-box pb-50">
+                                                                                                                                                        <div class="icon">
+                                                                                                                                                            <img src="assets/images/icons/experience-icon-01.png" alt="">
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="content">
+                                                                                                                                                            <h2 class="title"><span class="counter">51</span>%</h2>
+                                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                                                                                                                                            </p>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="single-counter-box pb-50">
+                                                                                                                                                        <div class="icon">
+                                                                                                                                                            <img src="assets/images/icons/experience-icon-01.png" alt="">
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="content">
+                                                                                                                                                            <h2 class="title"><span class="counter">51</span>%</h2>
+                                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                                                                                                                                            </p>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="single-counter-box pt-60">
+                                                                                                                                                        <div class="icon">
+                                                                                                                                                            <img src="assets/images/icons/experience-icon-03.png" alt="">
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="content">
+                                                                                                                                                            <h2 class="title"><span class="counter">100</span>%</h2>
+                                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                                                                                                                                            </p>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="single-counter-box pt-60">
+                                                                                                                                                        <div class="icon">
+                                                                                                                                                            <img src="assets/images/icons/experience-icon-04.png" alt="">
+                                                                                                                                                        </div>
+                                                                                                                                                        <div class="content">
+                                                                                                                                                            <h2 class="title"><span class="counter">10</span>%</h2>
+                                                                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                                                                                                                                            </p>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
                                                                                                                                         </div>
                                                                                                                                     </div>
                                                                                                                                 </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </section> -->
+                                                                                                                            </section> -->
     <!-- counter area end -->
 
     <!-- pricing area start -->

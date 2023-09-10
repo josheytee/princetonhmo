@@ -47,12 +47,49 @@
                                     aria-labelledby="appointment-tab">
                                     <div class="contact-form-touch">
                                         <div class="section-title">
-                                            <h2 class="title">Thank you for choosing us. Kindly fill the form below to get
-                                                started.</h2>
+                                            <h2 class="title">Kindly fill the form below to get started.</h2>
                                         </div>
                                         <div class="contact-form-getin mt-35">
                                             <form action="index.html">
                                                 <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="state" id="state-label">Your Firstname:</label>
+                                                            <input type="text" name="mail" id="state">
+                                                            <span><i class="fal fa-user"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="state" id="state-label">Your Lastname:</label>
+                                                            <input type="text" name="mail" id="state">
+                                                            <span><i class="fal fa-user"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="email" id="email-label">Your Work Email: </label>
+                                                            <input type="email" name="mail" id="email"
+                                                                placeholder="sokilainfo@gmail.com">
+                                                            <span><i class="fal fa-envelope"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="address" id="address-label"> Your Phone
+                                                                Number:</label>
+                                                            <input type="text" name="mail" id="address">
+                                                            <span><i class="fal fa-phone"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="state" id="state-label">State:</label>
+                                                            <input type="text" name="state" id="state"
+                                                                placeholder="sokilainfo@gmail.com">
+                                                            <span><i class="fal fa-chess-board"></i></span>
+                                                        </div>
+                                                    </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="fullname" id="fullname-label">Company Name </label>
@@ -63,26 +100,12 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="state" id="state-label">Your Firstname:</label>
-                                                            <input type="text" name="mail" id="state">
-                                                            <span><i class="fal fa-user"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
                                                             <label for="address" id="address-label">Company Address</label>
                                                             <input type="text" name="mail" id="address">
                                                             <span><i class="fal fa-building"></i></span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label for="state" id="state-label">Your
-                                                                Lastname:</label>
-                                                            <input type="text" name="mail" id="state">
-                                                            <span><i class="fal fa-user"></i></span>
-                                                        </div>
-                                                    </div>
+
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="state" id="state-label">Is this your company’s
@@ -91,30 +114,8 @@
                                                             <span><i class="fal fa-envelope"></i></span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label for="address" id="address-label"> Your Phone
-                                                                Number:</label>
-                                                            <input type="text" name="mail" id="address">
-                                                            <span><i class="fal fa-phone"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label for="state" id="state-label">State:</label>
-                                                            <input type="text" name="state" id="state"
-                                                                placeholder="sokilainfo@gmail.com">
-                                                            <span><i class="fal fa-chess-board"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label for="email" id="email-label">Your Work Email: </label>
-                                                            <input type="email" name="mail" id="email"
-                                                                placeholder="sokilainfo@gmail.com">
-                                                            <span><i class="fal fa-envelope"></i></span>
-                                                        </div>
-                                                    </div>
+
+
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="email" id="email-label">Staff strength:</label>
@@ -124,7 +125,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label for="messages" id="messages-label">Comments:</label>
                                                             <textarea name="message" id="messages" placeholder="Write here"></textarea>
@@ -132,7 +133,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
-                                                        <button class="site-btn mt-30" type="submit">Submit Form</button>
+                                                        <button class="site-btn mt-30" type="submit">Get Quote</button>
                                                     </div>
                                                 </div>
                                             </form>
